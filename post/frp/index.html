@@ -1,23 +1,109 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://WindFgg.github.io</id>
-    <title>Gridea</title>
-    <updated>2022-02-17T17:37:34.162Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://WindFgg.github.io"/>
-    <link rel="self" href="https://WindFgg.github.io/atom.xml"/>
-    <subtitle>贵有恒 何必三更眠五更起&lt;/br&gt;
-最无益 只怕一日曝十日寒</subtitle>
-    <logo>https://WindFgg.github.io/images/avatar.png</logo>
-    <icon>https://WindFgg.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2022, Gridea</rights>
-    <entry>
-        <title type="html"><![CDATA[Frp的使用指南]]></title>
-        <id>https://WindFgg.github.io/post/frp/</id>
-        <link href="https://WindFgg.github.io/post/frp/">
-        </link>
-        <updated>2022-02-17T17:25:12.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="简介">简介</h3>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Frp的使用指南 | Gridea</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://WindFgg.github.io/favicon.ico?v=1645119421927">
+<link rel="stylesheet" href="https://WindFgg.github.io/styles/main.css">
+
+
+  
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css" />
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="简介
+frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议。可以将内网服务以安全、便捷的方式通过具有公网 IP 节点的中转暴露到公网。
+Github : https://github.c..." />
+    <meta name="keywords" content="frp" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://WindFgg.github.io">
+        <img src="https://WindFgg.github.io/images/avatar.png?v=1645119421927" class="site-logo">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      贵有恒 何必三更眠五更起</br>
+最无益 只怕一日曝十日寒
+    </div>
+    <div class="site-footer">
+      <a href="https://github.com/WindFgg" target="_blank">Feng_Yun</a> | <a class="rss" href="https://WindFgg.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Frp的使用指南</h2>
+            <div class="post-date">2022-02-18</div>
+            
+            <div class="post-content" v-pre>
+              <h3 id="简介">简介</h3>
 <p>frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议。可以将内网服务以安全、便捷的方式通过具有公网 IP 节点的中转暴露到公网。</p>
 <p>Github : <strong>https://github.com/fatedier/frp</strong></p>
 <p>中文文档：<strong>https://gofrp.org/docs/</strong></p>
@@ -155,36 +241,80 @@ winsw.exe refresh ## 刷新服务属性
     &lt;logpath&gt;service-logs&lt;/logpath&gt;
 &lt;/service&gt;
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[使用Cloudflare Worker搭建一个免费、自己的 github代理]]></title>
-        <id>https://WindFgg.github.io/post/cfgithubproxy/</id>
-        <link href="https://WindFgg.github.io/post/cfgithubproxy/">
-        </link>
-        <updated>2022-02-17T17:23:49.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="前言">前言</h2>
-<p>现在都流行无服务器函数，作为大牌CDN提供商<strong>cloud flare</strong>自然不甘落后推出了worker服务。免费用户有10万请求/每天 的额度，搭配上一些小型项目比如jsproxy就显得格外香甜。</p>
-<h3 id="jsproxy简介">jsproxy简介</h3>
-<p>jsproxy是 一个基于浏览器端 JS 实现的在线代理 。</p>
-<p>传统在线代理都是在服务端替换 HTML/JS/CSS 等资源中的 URL。这不仅需要对内容做大量的分析和处理，还需对流量进行解压和再压缩，消耗大量 CPU 资源。并且由于逻辑较复杂，通常使用 Python/PHP 等编程语言自己实现。</p>
-<p>为降低服务端开销，本项目使用浏览器的一个黑科技 —— Service Worker。它能让 JS 拦截网页产生的请求，并能自定义返回内容，相当于在浏览器内部实现一个反向代理。这使得绝大部分的内容处理都可以在浏览器上完成，服务器只需纯粹的转发流量。</p>
-<p>由于原项目还是需要海外服务器，所以之前也只是知道但是懒得搭建，毕竟这个对我的作用有限。但是后来作者针对CF的worker项目单独做了个<br>
-CloudFlare Worker 版。这个版本对于没有海外服务器或者是对于海外网站浏览需求量较低水平的人来说是相当不错的了。每天10万次请求也足以应对个人使用或者是小范围分享了。</p>
-<h2 id="使用方法">使用方法</h2>
-<p>没有CF账号的先注册一个：https://dash.cloudflare.com/</p>
-<h3 id="创建worker">创建worker</h3>
-<p>直接点击Star Build https://workers.cloudflare.com/</p>
-<h3 id="复制js">复制js</h3>
-<p><img src="https://ae01.alicdn.com/kf/Hffa26636a6a8465a97e0817b25d44b30B.png" alt="image.png" loading="lazy"><br>
-填写自己喜爱的二级域名然后创建worker<br>
-点击创建服务 成功之后点进去有个快速编辑<br>
-进入github项目的<a href="https://github.com/yangmyc/jsproxy/blob/master/cf-worker/index.js">index.js</a>,复制代码。<br>
-清除示范代码后粘贴进去<br>
-<img src="https://ae02.alicdn.com/kf/H5b01a73b61034b259b134f072ec7f505X.png" alt="image.png" loading="lazy"><br>
-点击左下角保存并部署 还可以在预览页面看到你的worker</p>
-<p>收藏你的worker的域名或者记住就可以随时随地用了</p>
-<p>你可以使用该代理加速下载github仓库或者下载github上的文件</p>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://WindFgg.github.io/tag/LxRztxjWW/" class="tag">
+                    frp
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://WindFgg.github.io/post/cfgithubproxy/">
+                  <h3 class="post-title">
+                    使用Cloudflare Worker搭建一个免费、自己的 github代理
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+
+              
+                <div id="disqus_thread" data-aos="fade-in"></div>
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+
+  
+    <script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+    <script>
+
+    var options = {
+      shortname: '',
+      apikey: '9eq0znZ8tK5TdyfXQ0M9xn2OqZO7oLb1KcbtLlysyYUxRnFxJJO7xNa34oxFm7QD',
+    }
+    if ('') {
+      options.api = ''
+    }
+    var dsqjs = new DisqusJS(options)
+
+    </script>
+  
+
+
+
+
+  </body>
+</html>
