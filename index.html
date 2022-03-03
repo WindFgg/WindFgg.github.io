@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Gridea</title>
-<link rel="shortcut icon" href="https://WindFgg.github.io/favicon.ico?v=1646311913378">
+<link rel="shortcut icon" href="https://WindFgg.github.io/favicon.ico?v=1646312561607">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://WindFgg.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="Gridea - Atom Feed" href="https://WindFgg.github.io/atom.xml">
@@ -19,7 +19,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://WindFgg.github.io">
-  <img class="avatar" src="https://WindFgg.github.io/images/avatar.png?v=1646311913378" alt="">
+  <img class="avatar" src="https://WindFgg.github.io/images/avatar.png?v=1646312561607" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -208,128 +208,7 @@
       </div>
       
       <div class="post-abstract">
-        <h2 id="前言">前言</h2>
-<p>因最近老师提出提出了<code>Socket</code>是否可以与<code>WebSocket</code>通讯的问题,让我去了解尝试一下,在网上搜索了一些有关于<code>Socket</code>和<code>WebSocket</code>的文章之后,便写下了这篇文章。在日常开发场景中,如果不是一个非常大型的系统,需要采用一些定制化的需求,我们只用粗略的了解这些协议的信息即可,没必要去深究这些协议.在本文中我列举了<code>WebSocket</code>和<code>Socket</code>以及<code>HTTP</code> 的简介以及他们的不同.随后我使用<a href="#C#%E5%AE%9E%E7%8E%B0">C#实现</a>了简单的Socket和WebSocket的列子。</p>
-<h2 id="socket">Socket</h2>
-<h3 id="简介">简介</h3>
-<p><code>Socket</code>是<a href="#OSI%E6%A8%A1%E5%9E%8B">OSI模型</a>中应用层与<a href="#TCP/IP%E5%8D%8F%E8%AE%AE">TCP/IP协议</a>族通信的中间软件抽象层，它是一组<code>接口</code>。在设计模式中，<code>Socket</code>其实就是一个门面模式，它把复杂的<a href="https://baike.baidu.com/item/TCP%2FIP%E5%8D%8F%E8%AE%AE/212915?fromtitle=tcp%2Fip&amp;fromid=214077&amp;fr=aladdin">TCP/IP协议</a>隐藏在<code>Socket</code>接口后面，对用户来说，一组简单的接口就是全部，让<code>Socket</code>去组织数据，以符合指定的协议。<code>Socket</code>又称套接字。</p>
-<p>一个生活中的场景。你要打电话给一个朋友，先拨号，朋友听到电话铃声后提起电话，这时你和你的朋友就建立起了连接，就可以讲话了。等交流结束，挂断电话结束此次交谈。</p>
-<p><strong>我所理解的Socket就是为了更方便使用TCP协议或者UDP协议的实现封装和应用。是抽象接口</strong></p>
-<h3 id="参考文献">参考文献</h3>
-<ol>
-<li><a href="https://blog.csdn.net/pashanhu6402/article/details/96428887">Socket原理</a></li>
-<li>百度百科：<a href="https://baike.baidu.com/item/%E5%A5%97%E6%8E%A5%E5%AD%97/9637606?fromtitle=socket&amp;fromid=281150&amp;fr=aladdin">Scoket(套接字)</a></li>
-</ol>
-<h2 id="websocket">WebSocket</h2>
-<h3 id="简介-2">简介</h3>
-<p><code>WebSocket</code>是HTML5一种新的协议。它实现了浏览器与服务器全双工通信(full-duplex)。一开始的握手需要借助HTTP请求完成(又称协议升级（HTTP-&gt;Websocket）。它的最大特点就是，服务器可以主动向客户端推送信息，客户端也可以主动向服务器发送信息，是真正的双向平等对话，属于<a href="https://en.wikipedia.org/wiki/Push_technology">服务器推送技术</a>的一种。目的：即时通讯，替代轮询</p>
-<p><strong>我所理解的WebSocket是双向通信协议，可以双向发送或接受信息。他的出现是为了替代HTTP协议长轮询的效率低下等问题进行了解决</strong></p>
-<h3 id="参考文献-2">参考文献</h3>
-<ol>
-<li>阮一峰：<a href="https://www.ruanyifeng.com/blog/2017/05/websocket.html">WebSocket 教程</a></li>
-<li><a href="https://www.cnblogs.com/cjeandailynotes/p/12594824.html">看完让你彻底搞懂Websocket原理</a></li>
-<li><a href="https://baijiahao.baidu.com/s?id=1713307876537918339&amp;wfr=spider&amp;for=pc">万字长文，一篇吃透WebSocket：概念、原理、易错常识、动手实践</a></li>
-</ol>
-<h2 id="http">HTTP</h2>
-<h3 id="简介-3">简介</h3>
-<p><code>HTTP</code>协议(超文本传输协议HyperText Transfer Protocol)，它是基于TCP协议的应用层传输协议，简单来说就是客户端和服务端进行数据传输的一种规则。<code>HTTP</code> 是一种<strong>无状态</strong> (stateless) 协议, <code>HTTP</code>协议本身不会对发送过的请求和相应的通信状态进行持久化处理。这样做的目的是为了保持HTTP协议的简单性，从而能够快速处理大量的事务, 提高效率。然而，在许多应用场景中，我们需要保持用户登录的状态或记录用户购物车中的商品。由于<code>HTTP</code>是无状态协议，所以必须引入一些技术来记录管理状态，例如<code>Cookie</code>。</p>
-<h3 id="参考文献-3">参考文献</h3>
-<p>1.知乎:<a href="https://zhuanlan.zhihu.com/p/45173862">深入理解HTTP协议</a></p>
-<h3 id="三种协议的区别">三种协议的区别</h3>
-<p>1.应用层协议</p>
-<ul>
-<li>DNS</li>
-<li>HTTP</li>
-<li>FTP</li>
-<li>SMTP</li>
-<li>WebSocket</li>
-<li>SNMP</li>
-</ul>
-<p>2.运输层协议</p>
-<ul>
-<li>TCP</li>
-<li>UDP</li>
-</ul>
-<p><code>Socket</code>其实并不是一个协议,是一个<code>抽象概念</code>，是为了方便使用<code>TCP协议</code>或<code>UDP协议</code>而抽象出来的一层，是位于应用层和传输控制层之间的一组接口。</p>
-<p><code>WebSocket</code>则是一个典型的应用层协议。<code>Socket</code>是传输控制层协议，<code>WebSocket</code>是应用层协议。我所理解的<code>WebSocket</code>就是对<code>Socket</code>接口的一种实现,但是他又跟<code>Socket</code>使用方面，完全两个东西.<code>WebSocket</code>一开始的握手需要借助HTTP请求完成,又称<code>协议升级</code>（HTTP-&gt;Websocket）</p>
-<p><code>Http</code>是一种<strong>无状态</strong> 协议, <code>HTTP</code>协议本身不会对发送过的请求和相应的通信状态进行持久化处理。</p>
-<h3 id="参考文献-4">参考文献</h3>
-<ol>
-<li><a href="https://www.cnblogs.com/aspirant/p/11334957.html">Http、Socket、WebSocket之间联系与区别 </a></li>
-</ol>
-<h3 id="c实现">C#实现</h3>
-<p><code>C#</code> 中提供了</p>
-<ul>
-<li>
-<p><code>Socket</code>类 ,是抽象概念是接口,可以基于它实现<code>TCP</code>传输 或 <code>UDP</code>传输</p>
-</li>
-<li>
-<p>基于<code>Socket</code>类 ,使用<code>TCP协议</code>封装的<code>TcpClient</code>类和<code>TCPListener</code> 类</p>
-</li>
-<li>
-<p>基于<code>Socket</code>类 ,使用<code>UDP协议</code>封装的<code>UdpClient</code>类</p>
-</li>
-</ul>
-<p>在使用<code>Socket</code>遇到了一个问题<code>粘包</code></p>
-<p>(<strong>严谨一点来说并不叫粘包,TCP协议是流式协议,所谓流式协议，即协议的内容是像流水一样的字节流，内容与内容之间没有明确的分界标志，需要我们人为地去给这些协议划分边界。客户端发送数据时，发送的buffer为实际发送内容的长度，当发送数据的长度小于服务端接收buffer的长度时，多个发送内容就会存放到服务端的buffer中，导致上次发送的数据和本次的发送的数据连在一起。</strong>)</p>
-<p>解决的方法也有很多(参考文献:<a href="https://www.zhihu.com/question/20210025?sort=created">怎么解决TCP网络传输「粘包」问题？ - 知乎 携程旅行网 资深研发工程师的回答 </a>)</p>
-<ol>
-<li>
-<p>固定包长的数据包</p>
-</li>
-<li>
-<p>以指定字符（串）为包的结束标志</p>
-</li>
-<li>
-<p>包头 + 包体格式</p>
-</li>
-</ol>
-<p>这里我是推荐大家使用第二种和第三种方式,第二种方式需要使用一些特定的字符进行划分每段数据的结束标志,遇到原消息种含有结束标志的时候,就需要对这些字符做转码或者转义操作，以免被接收方错误地当成包结束标志而误解析。第三章就是需要自己定义<strong>包头 + 包体格式</strong>,在日常开发中,还是要根据自己的实际需求去选择自己所使用的方法.</p>
-<h4 id="源码">源码</h4>
-<p>https://github.com/WindFgg/.NETSocket</p>
-<h2 id="总结">总结</h2>
-<p>最后总结出来C#的<code>Socket</code>类可以封装为<code>WebSocket</code> <code>WebSocket</code>自带心跳</p>
-<p><code>HTTP</code> <code>WebSocket</code> <code>Tcp</code> <code>UDP</code>都可以使用C#<code>Socket</code>类进行封装,C#有封装好的。</p>
-<p>又因为他们WebSocket和Socket在使用方面,完全不是一个东西。出发层面就错了。</p>
-<h2 id="拓展资料">拓展资料</h2>
-<h3 id="osi模型">OSI模型</h3>
-<h4 id="来源">来源</h4>
-<p>OSI（Open System Interconnect），即开放式系统互联。 一般都叫OSI参考模型，是ISO（国际标准化组织）组织在1985年研究的网络互连模型。 ISO为了更好的使网络应用更为普及，推出了OSI参考模型。其含义就是推荐所有公司使用这个规范来控制网络。这样所有公司都有相同的规范，就能互联了。</p>
-<h4 id="osi七层模型的划分">OSI七层模型的划分</h4>
-<p>OSI定义了网络互连的七层框架（物理层、数据链路层、网络层、传输层、会话层、表示层、应用层），即ISO开放互连系统参考模型。如下图。每一层实现各自的功能和协议，并完成与相邻层的接口通信。OSI的服务定义详细说明了各层所提供的服务。某一层的服务就是该层及其下各层的一种能力，它通过接口提供给更高一层。各层所提供的服务与这些服务是怎么实现的无关。</p>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/11/30/okj4KXOTHQ18gbd.png" alt="" loading="lazy"></figure>
-<h4 id="参考文献-5">参考文献</h4>
-<ol>
-<li>
-<p>百度百科：<a href="https://baike.baidu.com/item/OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B">OSI参考模型</a></p>
-</li>
-<li>
-<p><a href="https://blog.csdn.net/wdkirchhoff/article/details/43915825">HCNA-HNTD——以太网帧结构</a></p>
-</li>
-<li>
-<p>引用博客：<a href="https://www.cnblogs.com/qishui/p/5428938.html">OSI七层模型与TCP/IP五层模型</a></p>
-</li>
-</ol>
-<h3 id="tcpip协议">TCP/IP协议</h3>
-<h4 id="简介-4">简介</h4>
-<p><code>TCP/IP协议簇</code>， TCP/IP（Transmission Control Protocol/Internet Protocol）即传输控制协议/网间协议，定义了主机如何连入因特网及数据如何再它们之间传输的标准，</p>
-<p><strong>从字面意思来看TCP/IP是TCP和IP协议的合称，但实际上TCP/IP协议是指因特网整个TCP/IP协议簇</strong>。不同于ISO模型的七个分层，TCP/IP协议参考模型把所有的TCP/IP系列协议归类到四个抽象层中</p>
-<h4 id="tcpip四层模型以及五层模型">TCP/IP四层模型以及五层模型</h4>
-<h5 id="简介-5">简介</h5>
-<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2021/12/01/4VqdWDlwvTkS1zL.png" alt="" loading="lazy"></figure>
-<p>TCP/IP四层模型是OSI七层模型的简化版，但是大致的核心内容是很类似的。虽然OSIG更容易开发和排除故障，但是相较于简洁的TCP/IP，显得庞大而笨拙。十分有趣的是，OSI虽然是官方提出的，但是由于一些原因，在它被完善之前，由民间开发的TCP/IP早已投入实际使用了，所以它几乎是只存在与教科书中，并没有大范围地投入使用。</p>
-<h5 id="tcpip四层参考模型">TCP/IP四层参考模型</h5>
-<p>TCP/IP四层参考模型从上到下可分为四层：<br>
-4、应用层（Application）：为用户提供所需要的各种服务<br>
-3、传输层（Transport）：为应用层实体提供端到端的通信功能，保证了数据包的顺序传送及数据的完整性<br>
-2、网际层（Internet）：主要解决主机到主机的通信问题<br>
-1、网络接口层（Network Access）：负责监视数据在主机和网络之间的交换</p>
-<h5 id="五层tcpip协议的体系结构">五层TCP/IP协议的体系结构</h5>
-<p>五层协议只是OSI和TCP/IP的综合。是专门为介绍网络原理而设计的，与TCP/IP四层模型唯一不同的就是将网络接口层分为了数据链路层和物理层，在实际的应用中还是使用TCP/IP四层模型的。</p>
-<h4 id="参考文献-6">参考文献</h4>
-<p>1.百度百科：<a href="https://baike.baidu.com/item/TCP%2FIP%E5%8D%8F%E8%AE%AE/212915?fromtitle=tcp%2Fip&amp;fromid=214077&amp;fr=aladdin">TCP/IP协议</a></p>
-<p>2.参考博客：<a href="https://www.cnblogs.com/wxd0108/p/7597216.html">OSI七层协议模型、TCP/IP四层模型和五层协议体系结构之间的关系 </a></p>
-
+        
       </div>
     </article>
   
