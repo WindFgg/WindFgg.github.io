@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://WindFgg.github.io</id>
     <title>Gridea</title>
-    <updated>2022-02-17T17:37:34.162Z</updated>
+    <updated>2022-03-03T05:47:01.990Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://WindFgg.github.io"/>
     <link rel="self" href="https://WindFgg.github.io/atom.xml"/>
@@ -12,29 +12,403 @@
     <icon>https://WindFgg.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Gridea</rights>
     <entry>
+        <title type="html"><![CDATA[键盘 KeyCode对照表]]></title>
+        <id>https://WindFgg.github.io/post/key-code/</id>
+        <link href="https://WindFgg.github.io/post/key-code/">
+        </link>
+        <updated>2022-03-03T05:12:52.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="字母和数字键的键码值keycode">字母和数字键的键码值(KeyCode)</h2>
+<table>
+<thead>
+<tr>
+<th><strong>按键</strong></th>
+<th><strong>KeyCode</strong></th>
+<th><strong>按键</strong></th>
+<th><strong>KeyCode</strong></th>
+<th><strong>按键</strong></th>
+<th><strong>KeyCode</strong></th>
+<th><strong>按键</strong></th>
+<th><strong>KeyCode</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>65</td>
+<td>J</td>
+<td>74</td>
+<td>S</td>
+<td>83</td>
+<td>1</td>
+<td>49</td>
+</tr>
+<tr>
+<td>B</td>
+<td>66</td>
+<td>K</td>
+<td>75</td>
+<td>T</td>
+<td>84</td>
+<td>2</td>
+<td>50</td>
+</tr>
+<tr>
+<td>C</td>
+<td>67</td>
+<td>L</td>
+<td>76</td>
+<td>U</td>
+<td>85</td>
+<td>3</td>
+<td>51</td>
+</tr>
+<tr>
+<td>D</td>
+<td>68</td>
+<td>M</td>
+<td>77</td>
+<td>V</td>
+<td>86</td>
+<td>4</td>
+<td>52</td>
+</tr>
+<tr>
+<td>E</td>
+<td>69</td>
+<td>N</td>
+<td>78</td>
+<td>W</td>
+<td>87</td>
+<td>5</td>
+<td>53</td>
+</tr>
+<tr>
+<td>F</td>
+<td>70</td>
+<td>O</td>
+<td>79</td>
+<td>X</td>
+<td>88</td>
+<td>6</td>
+<td>54</td>
+</tr>
+<tr>
+<td>G</td>
+<td>71</td>
+<td>P</td>
+<td>80</td>
+<td>Y</td>
+<td>89</td>
+<td>7</td>
+<td>55</td>
+</tr>
+<tr>
+<td>H</td>
+<td>72</td>
+<td>Q</td>
+<td>81</td>
+<td>Z</td>
+<td>90</td>
+<td>8</td>
+<td>56</td>
+</tr>
+<tr>
+<td>I</td>
+<td>73</td>
+<td>R</td>
+<td>82</td>
+<td>0</td>
+<td>48</td>
+<td>9</td>
+<td>57</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="数字键和功能键的键码值keycode">数字键和功能键的键码值(KeyCode)</h2>
+<table>
+<thead>
+<tr>
+<th><strong>按键</strong></th>
+<th><strong>KeyCode</strong></th>
+<th><strong>按键</strong></th>
+<th><strong>KeyCode</strong></th>
+<th><strong>按键</strong></th>
+<th><strong>KeyCode</strong></th>
+<th><strong>按键</strong></th>
+<th><strong>KeyCode</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>96</td>
+<td>8</td>
+<td>104</td>
+<td>F1</td>
+<td>112</td>
+<td>F7</td>
+<td>118</td>
+</tr>
+<tr>
+<td>1</td>
+<td>97</td>
+<td>9</td>
+<td>105</td>
+<td>F2</td>
+<td>113</td>
+<td>F8</td>
+<td>119</td>
+</tr>
+<tr>
+<td>2</td>
+<td>98</td>
+<td>*</td>
+<td>106</td>
+<td>F3</td>
+<td>114</td>
+<td>F9</td>
+<td>120</td>
+</tr>
+<tr>
+<td>3</td>
+<td>99</td>
+<td>+</td>
+<td>107</td>
+<td>F4</td>
+<td>115</td>
+<td>F10</td>
+<td>121</td>
+</tr>
+<tr>
+<td>4</td>
+<td>100</td>
+<td>Enter</td>
+<td>108</td>
+<td>F5</td>
+<td>116</td>
+<td>F11</td>
+<td>122</td>
+</tr>
+<tr>
+<td>5</td>
+<td>101</td>
+<td>-</td>
+<td>109</td>
+<td>F6</td>
+<td>117</td>
+<td>F12</td>
+<td>123</td>
+</tr>
+<tr>
+<td>6</td>
+<td>102</td>
+<td>.</td>
+<td>110</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>103</td>
+<td>/</td>
+<td>111</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="控制键的键码值keycode">控制键的键码值(KeyCode)</h2>
+<table>
+<thead>
+<tr>
+<th><strong>按键</strong></th>
+<th><strong>KeyCode</strong></th>
+<th><strong>按键</strong></th>
+<th><strong>KeyCode</strong></th>
+<th><strong>按键</strong></th>
+<th><strong>keyCode</strong></th>
+<th><strong>按键</strong></th>
+<th><strong>KeyCode</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BackSpace</td>
+<td>8</td>
+<td>Esc</td>
+<td>27</td>
+<td>Right Arrow</td>
+<td>39</td>
+<td>-_</td>
+<td>189</td>
+</tr>
+<tr>
+<td>Tab</td>
+<td>9</td>
+<td>Spacebar</td>
+<td>32</td>
+<td>Dw Arrow</td>
+<td>40</td>
+<td>.&gt;</td>
+<td>190</td>
+</tr>
+<tr>
+<td>Clear</td>
+<td>12</td>
+<td>Page Up</td>
+<td>33</td>
+<td>Insert</td>
+<td>45</td>
+<td>/?</td>
+<td>191</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td>13</td>
+<td>Page Down</td>
+<td>34</td>
+<td>Delete</td>
+<td>46</td>
+<td>`~</td>
+<td>192</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>16</td>
+<td>End</td>
+<td>35</td>
+<td>Num Lock</td>
+<td>144</td>
+<td>[{</td>
+<td>219</td>
+</tr>
+<tr>
+<td>Control</td>
+<td>17</td>
+<td>Home</td>
+<td>36</td>
+<td>;:</td>
+<td>186</td>
+<td>|</td>
+<td>220</td>
+</tr>
+<tr>
+<td>Alt</td>
+<td>18</td>
+<td>Left Arrow</td>
+<td>37</td>
+<td>=+</td>
+<td>187</td>
+<td>]}</td>
+<td>221</td>
+</tr>
+<tr>
+<td>Cape Lock</td>
+<td>20</td>
+<td>Up Arrow</td>
+<td>38</td>
+<td>,&lt;</td>
+<td>188</td>
+<td>'&quot;</td>
+<td>222</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="多媒体键的键码值keycode">多媒体键的键码值(KeyCode)</h2>
+<table>
+<thead>
+<tr>
+<th><strong>按键</strong></th>
+<th><strong>KeyCode</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>音量加</td>
+<td>175</td>
+</tr>
+<tr>
+<td>音量减</td>
+<td>174</td>
+</tr>
+<tr>
+<td>停止</td>
+<td>179</td>
+</tr>
+<tr>
+<td>静音</td>
+<td>173</td>
+</tr>
+<tr>
+<td>浏览器</td>
+<td>172</td>
+</tr>
+<tr>
+<td>邮件</td>
+<td>180</td>
+</tr>
+<tr>
+<td>搜索</td>
+<td>170</td>
+</tr>
+<tr>
+<td>收藏</td>
+<td>171</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Frp的使用指南]]></title>
         <id>https://WindFgg.github.io/post/frp/</id>
         <link href="https://WindFgg.github.io/post/frp/">
         </link>
         <updated>2022-02-17T17:25:12.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="简介">简介</h3>
-<p>frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议。可以将内网服务以安全、便捷的方式通过具有公网 IP 节点的中转暴露到公网。</p>
+        <content type="html"><![CDATA[<h2 id="简介">简介</h2>
+<p>frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议。可以将内网服务以安全、便捷的方式通过具有公网 IP 节点的中转暴露到公网。Frp分为服务端和客户端。</p>
 <p>Github : <strong>https://github.com/fatedier/frp</strong></p>
 <p>中文文档：<strong>https://gofrp.org/docs/</strong></p>
-<h3 id="常用命令">常用命令</h3>
-<pre><code class="language-sh">#Frps
-chomod 777 frps #赋权限
-./frps -c ./frps.ini #使用目录下的frps.ini 配置尝试启动 Ctrl+C 退出
-nohup ./frps -c ./frps.ini &amp; #使用nohup后台运行frps 目录下nohup.txt有日志
-killall -9 frps #杀掉正在后台运行的frps
-
-#Frpc
-chomod 777 frpc #赋权限
-./frpc -c ./frpc.ini #使用目录下的frpc.ini 配置尝试启动 Ctrl+C 退出
-nohup ./frpc -c ./frpc.ini &amp; #使用nohup后台运行frpc 目录下nohup.txt有日志
-killall -9 frpc #杀掉正在后台运行的frpc
-</code></pre>
-<h2 id="frps-配置文件">Frps 配置文件</h2>
+<h2 id="frp-server-服务端">Frp Server 服务端</h2>
+<h3 id="配置文件">配置文件</h3>
 <p><strong>复制配置文件请务必删掉注释</strong></p>
 <p>服务端参数说明请移步：https://gofrp.org/docs/reference/server-configures/</p>
 <pre><code class="language-toml">[common]
@@ -47,7 +421,79 @@ dashboard_pwd=Hcw022703.. #仪表盘密码
 vhost_http_port=9999 #服务端需要开启的端口（访问客户端web服务自定义的端口号）
 #vhost_https_port = 10443 # https端口
 </code></pre>
-<h2 id="frpc-配置文件">Frpc 配置文件</h2>
+<h3 id="命令">命令</h3>
+<h4 id="liunx">liunx</h4>
+<h5 id="nohup">nohup</h5>
+<pre><code class="language-sh">chomod 777 frps #赋权限
+./frps -c ./frps.ini #使用目录下的frps.ini 配置尝试启动 Ctrl+C 退出
+nohup ./frps -c ./frps.ini &amp; #使用nohup后台运行frps 目录下nohup.txt有日志
+killall -9 frps #杀掉正在后台运行的frps
+</code></pre>
+<h5 id="service">service</h5>
+<p><a href="http://www.jinbuguo.com/systemd/systemd.service.html">Systemd.Service 中文手册</a></p>
+<pre><code class="language-sh">#服务内容
+[Unit]
+Description=frps
+After=network.target
+
+[Service]
+Restart=on-failure
+RestartSec=5 
+ExecStart=/root/frp/frps -c /root/frp/frps.ini #注意 这里frps的路径 和 frps.ini 路径要正确
+
+[Install]
+WantedBy=multi-user.target
+#
+
+## 一般出错都是在(frps或frpc)启动程序的路径和(frps.ini或frpc.ini)文件路径不对，导致服务开启失败。
+sudo vim /usr/lib/systemd/system/frps.service #创建frps服务文件
+sudo systemctl enable frps #启用frps服务
+sudo systemctl start frps #启动frps服务
+sudo systemctl list-units |grep frps  #查看frps服务是否生效 显示frps.service loaded active running 就表示服务开启成功
+sudo systemctl status frps #查看服务日志
+sudo systemctl restart frps #重启frps服务
+</code></pre>
+<h4 id="windows">windows</h4>
+<p><a href="https://github.com/winsw/winsw">winsw Githuh项目地址</a></p>
+<h4 id="常用命令">常用命令</h4>
+<pre><code class="language-bat">winsw.exe install ##安装服务
+winsw.exe uninstall ##卸载服务
+winsw.exe start ##启动服务
+winsw.exe stop ##停止服务
+winsw.exe restart ##重启服务
+winsw.exe status ##检查服务的状态
+winsw.exe refresh ## 刷新服务属性
+</code></pre>
+<h4 id="配置文件-2">配置文件</h4>
+<pre><code class="language-xml">&lt;service&gt;
+&lt;!-- 该服务的唯一标识 --&gt;
+    &lt;id&gt;frps&lt;/id&gt;
+    &lt;!-- 该服务的名称 --&gt;
+    &lt;name&gt;frp server&lt;/name&gt;
+    &lt;!-- 该服务的描述 --&gt;
+    &lt;description&gt;frp服务端 用来作为内网穿透的跳板&lt;/description&gt;
+    &lt;!-- 要运行的程序路径 --&gt;
+    &lt;executable&gt;./frps.exe&lt;/executable&gt;
+    &lt;!-- 携带的参数 --&gt;
+    &lt;arguments&gt;-c frps.ini&lt;/arguments&gt;
+    &lt;!-- 第一次启动失败 60秒重启 --&gt;
+    &lt;onfailure action=&quot;restart&quot; delay=&quot;60 sec&quot;/&gt;
+    &lt;!-- 第二次启动失败 120秒后重启 --&gt;
+    &lt;onfailure action=&quot;restart&quot; delay=&quot;120 sec&quot;/&gt;
+    &lt;!-- 日志模式 --&gt;
+    &lt;logmode&gt;append&lt;/logmode&gt;
+    &lt;!-- 指定日志文件目录(相对于executable配置的路径) --&gt;
+    &lt;logpath&gt;service-logs&lt;/logpath&gt;
+&lt;/service&gt;
+</code></pre>
+<pre><code>#Frpc
+chomod 777 frpc #赋权限
+./frpc -c ./frpc.ini #使用目录下的frpc.ini 配置尝试启动 Ctrl+C 退出
+nohup ./frpc -c ./frpc.ini &amp; #使用nohup后台运行frpc 目录下nohup.txt有日志
+killall -9 frpc #杀掉正在后台运行的frpc
+</code></pre>
+<h2 id="frp-client-客户端">Frp Client 客户端</h2>
+<h3 id="配置文件-3">配置文件</h3>
 <p><strong>复制配置文件请务必删掉注释</strong></p>
 <p>客户端参数说明请移步：https://gofrp.org/docs/reference/client-configures/</p>
 <p>客户端插件说明请移步：https://gofrp.org/docs/features/common/client-plugin/</p>
@@ -74,29 +520,18 @@ local_port = 9000
 remote_port=16660
 custom_domains = frp.qifengg.xyz
 </code></pre>
-<h2 id="frp-service-开机自启">Frp Service 开机自启</h2>
-<h3 id="liunx">Liunx</h3>
-<p><a href="http://www.jinbuguo.com/systemd/systemd.service.html">Systemd.Service 中文手册</a></p>
-<h4 id="常用命令-2">常用命令</h4>
-<pre><code class="language-sh">## 一般出错都是在(frps或frpc)启动程序的路径和(frps.ini或frpc.ini)文件路径不对，导致服务开启失败。
-
-sudo vim /usr/lib/systemd/system/frpc.service #创建frpc服务文件
-sudo systemctl enable frpc #启用frpc服务
-sudo systemctl start frpc #启动frpc服务
-sudo systemctl list-units |grep frpc  #查看frpc服务是否生效 显示frpc.service loaded active running 就表示服务开启成功
-sudo systemctl status frpc #查看服务日志
-sudo systemctl restart frpc #重启frpc服务
-
-sudo vim /usr/lib/systemd/system/frps.service #创建frps服务文件
-sudo systemctl enable frps #启用frps服务
-sudo systemctl start frps #启动frps服务
-sudo systemctl list-units |grep frps  #查看frps服务是否生效 显示frps.service loaded active running 就表示服务开启成功
-sudo systemctl status frps #查看服务日志
-sudo systemctl restart frps #重启frps服务
+<h3 id="命令-2">命令</h3>
+<h4 id="liunx-2">Liunx</h4>
+<h5 id="nohup-2">nohup</h5>
+<pre><code class="language-sh">chomod 777 frpc #赋权限
+./frpc -c ./frpc.ini #使用目录下的frpc.ini 配置尝试启动 Ctrl+C 退出
+nohup ./frpc -c ./frpc.ini &amp; #使用nohup后台运行frpc 目录下nohup.txt有日志
+killall -9 frpc #杀掉正在后台运行的frpc
 </code></pre>
-<h5 id="fprc-service-配置">Fprc Service 配置</h5>
-<p><strong>复制配置文件请务必删掉注释</strong></p>
-<pre><code class="language-toml">[Unit]
+<h5 id="service-2">service</h5>
+<p><a href="http://www.jinbuguo.com/systemd/systemd.service.html">Systemd.Service 中文手册</a></p>
+<pre><code class="language-sh">#服务内容
+[Unit]
 Description=frpc
 After=network.target
 
@@ -107,24 +542,19 @@ ExecStart=/root/frp/frpc -c /root/frp/frpc.ini #注意 这里frpc的路径 和 f
 
 [Install]
 WantedBy=multi-user.target
-</code></pre>
-<h5 id="fprs-service-配置">Fprs Service 配置</h5>
-<p><strong>复制配置文件请务必删掉注释</strong></p>
-<pre><code class="language-toml">[Unit]
-Description=frps
-After=network.target
+#
 
-[Service]
-Restart=on-failure
-RestartSec=5 
-ExecStart=/root/frp/frps -c /root/frp/frps.ini #注意 这里frps的路径 和 frps.ini 路径要正确
-
-[Install]
-WantedBy=multi-user.target
+## 一般出错都是在(frps或frpc)启动程序的路径和(frps.ini或frpc.ini)文件路径不对，导致服务开启失败。
+sudo vim /usr/lib/systemd/system/frpc.service #创建frpc服务文件
+sudo systemctl enable frpc #启用frps服务
+sudo systemctl start frpc #启动frpc服务
+sudo systemctl list-units |grep frps  #查看frps服务是否生效 显示frps.service loaded active running 就表示服务开启成功
+sudo systemctl status frpc #查看服务日志
+sudo systemctl restart frpc #重启frpc服务
 </code></pre>
-<h3 id="windows">Windows</h3>
+<h4 id="windows-2">windows</h4>
 <p><a href="https://github.com/winsw/winsw">winsw Githuh项目地址</a></p>
-<h4 id="常用命令-3">常用命令</h4>
+<h4 id="命令-3">命令</h4>
 <pre><code class="language-bat">winsw.exe install ##安装服务
 winsw.exe uninstall ##卸载服务
 winsw.exe start ##启动服务
@@ -133,14 +563,14 @@ winsw.exe restart ##重启服务
 winsw.exe status ##检查服务的状态
 winsw.exe refresh ## 刷新服务属性
 </code></pre>
-<h4 id="配置文件">配置文件</h4>
+<h4 id="配置文件-4">配置文件</h4>
 <pre><code class="language-xml">&lt;service&gt;
 &lt;!-- 该服务的唯一标识 --&gt;
     &lt;id&gt;frpc&lt;/id&gt;
     &lt;!-- 该服务的名称 --&gt;
     &lt;name&gt;frp client&lt;/name&gt;
     &lt;!-- 该服务的描述 --&gt;
-    &lt;description&gt;frpc客户端 这个服务用 frpc 实现内网穿透&lt;/description&gt;
+    &lt;description&gt;frp客户端 内网穿透&lt;/description&gt;
     &lt;!-- 要运行的程序路径 --&gt;
     &lt;executable&gt;./frpc.exe&lt;/executable&gt;
     &lt;!-- 携带的参数 --&gt;
@@ -155,6 +585,8 @@ winsw.exe refresh ## 刷新服务属性
     &lt;logpath&gt;service-logs&lt;/logpath&gt;
 &lt;/service&gt;
 </code></pre>
+<h4 id=""></h4>
+<h3 id="-2"></h3>
 ]]></content>
     </entry>
     <entry>
