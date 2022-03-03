@@ -1,10 +1,11 @@
 
+<!DOCTYPE html>
 <html>
   <head>
     
 <meta charset="utf-8" >
 
-<title>Gridea</title>
+<title>Socket的一次探索尝试 | Gridea</title>
 <meta name="description" content="贵有恒 何必三更眠五更起&lt;/br&gt;
 最无益 只怕一日曝十日寒">
 
@@ -16,6 +17,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://WindFgg.github.io/styles/main.css">
 
+
+  
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css" />
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -78,137 +85,46 @@
 
 
       <div class="content-container">
-        
-        
-<section class="post-item">
-    <div class="content">
-      <a href="https://WindFgg.github.io/post/key-code/">
-        <h2 class="post-title">键盘 KeyCode对照表</h2>
-      </a>
-      <div class="post-abstract">
-        
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2022-03-03</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
+        <div class="post-detail">
+          
+          <h2 class="post-title">Socket的一次探索尝试</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-11-30</span>
             
-              <a href="https://WindFgg.github.io/tag/baaPqbdI7/">
-                键盘
+              <span>
+                <i class="icon-pricetags-outline"></i>
                 
-                  ，
+                  <a href="https://WindFgg.github.io/tag/r4z0jMtBY/">
+                    C#
+                    
+                      ，
+                    
+                  </a>
                 
-              </a>
+                  <a href="https://WindFgg.github.io/tag/YG1O7AvnAA/">
+                    Socket
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://WindFgg.github.io/tag/Xk5cMuhNul/">
+                    网络
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://WindFgg.github.io/tag/LKctrQJhHt/">
+                    探索
+                    
+                  </a>
+                
+              </span>
             
-              <a href="https://WindFgg.github.io/tag/K08qYKarD8/">
-                key_code
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="https://WindFgg.github.io/post/cfgithubproxy/">
-        <h2 class="post-title">Cloudflare Worker 搭建 Github代理</h2>
-      </a>
-      <div class="post-abstract">
-        
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2022-01-20</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://WindFgg.github.io/tag/cRQchQ-No/">
-                教程
-                
-                  ，
-                
-              </a>
-            
-              <a href="https://WindFgg.github.io/tag/9EmWCH2MG/">
-                cloudflare
-                
-                  ，
-                
-              </a>
-            
-              <a href="https://WindFgg.github.io/tag/cyUr3hWC9z/">
-                github_proxy
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="https://WindFgg.github.io/post/frp/">
-        <h2 class="post-title">Frp的使用指南</h2>
-      </a>
-      <div class="post-abstract">
-        
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2021-12-24</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://WindFgg.github.io/tag/cRQchQ-No/">
-                教程
-                
-                  ，
-                
-              </a>
-            
-              <a href="https://WindFgg.github.io/tag/LxRztxjWW/">
-                frp
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="https://WindFgg.github.io/post/github-ti-jiao-ri-zhi-biao-qing-tu-biao/">
-        <h2 class="post-title">GitHub提交日志表情图标</h2>
-      </a>
-      <div class="post-abstract">
-        
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2021-12-01</span>
-        
-      </div>
-    </div>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="https://WindFgg.github.io/post/socket-de-yi-ci-tan-suo-chang-shi/">
-        <h2 class="post-title">Socket的一次探索尝试</h2>
-      </a>
-      <div class="post-abstract">
-        <h2 id="前言">前言</h2>
+          </div>
+          <div class="post-content">
+            <h2 id="前言">前言</h2>
 <p>因最近老师提出提出了<code>Socket</code>是否可以与<code>WebSocket</code>通讯的问题,让我去了解尝试一下,在网上搜索了一些有关于<code>Socket</code>和<code>WebSocket</code>的文章之后,便写下了这篇文章。在日常开发场景中,如果不是一个非常大型的系统,需要采用一些定制化的需求,我们只用粗略的了解这些协议的信息即可,没必要去深究这些协议.在本文中我列举了<code>WebSocket</code>和<code>Socket</code>以及<code>HTTP</code> 的简介以及他们的不同.随后我使用<a href="#C#%E5%AE%9E%E7%8E%B0">C#实现</a>了简单的Socket和WebSocket的列子。</p>
 <h2 id="socket">Socket</h2>
 <h3 id="简介">简介</h3>
@@ -329,55 +245,21 @@
 <h4 id="参考文献-6">参考文献</h4>
 <p>1.百度百科：<a href="https://baike.baidu.com/item/TCP%2FIP%E5%8D%8F%E8%AE%AE/212915?fromtitle=tcp%2Fip&amp;fromid=214077&amp;fr=aladdin">TCP/IP协议</a></p>
 <p>2.参考博客：<a href="https://www.cnblogs.com/wxd0108/p/7597216.html">OSI七层协议模型、TCP/IP四层模型和五层协议体系结构之间的关系 </a></p>
+<!-- more -->
 
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2021-11-30</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://WindFgg.github.io/tag/r4z0jMtBY/">
-                C#
-                
-                  ，
-                
-              </a>
-            
-              <a href="https://WindFgg.github.io/tag/YG1O7AvnAA/">
-                Socket
-                
-                  ，
-                
-              </a>
-            
-              <a href="https://WindFgg.github.io/tag/Xk5cMuhNul/">
-                网络
-                
-                  ，
-                
-              </a>
-            
-              <a href="https://WindFgg.github.io/tag/LKctrQJhHt/">
-                探索
-                
-              </a>
-            
-          </span>
+          </div>
+        </div>
+
         
       </div>
-    </div>
-    
-  </section>
 
+      
+        
 
-<div class="pagination-container">
-  
-  
-</div>
-
-
-      </div>
+        
+          <div id="disqus_thread"></div>
+        
+      
 
       <div class="site-footer">
   <div class="slogan">贵有恒 何必三更眠五更起</br>
@@ -416,6 +298,26 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+
+  
+    <script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+    <script>
+
+    var options = {
+      shortname: '',
+      apikey: '9eq0znZ8tK5TdyfXQ0M9xn2OqZO7oLb1KcbtLlysyYUxRnFxJJO7xNa34oxFm7QD',
+    }
+    if ('') {
+      options.api = ''
+    }
+    var dsqjs = new DisqusJS(options)
+
+    </script>
+  
 
 
 

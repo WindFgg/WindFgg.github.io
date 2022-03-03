@@ -1,101 +1,116 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>Frp的使用指南 | Gridea</title>
-<link rel="shortcut icon" href="https://WindFgg.github.io/favicon.ico?v=1646311018156">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<meta name="description" content="贵有恒 何必三更眠五更起&lt;/br&gt;
+最无益 只怕一日曝十日寒">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://WindFgg.github.io/favicon.ico?v=1646311505506">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://WindFgg.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Frp的使用指南 | Gridea - Atom Feed" href="https://WindFgg.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+  
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css" />
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
-    <meta name="description" content="简介
-frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议。可以将内网服务以安全、便捷的方式通过具有公网 IP 节点的中转暴露到公网。Frp分为服务端和客户端。
-Github : htt..." />
-    <meta name="keywords" content="frp" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://WindFgg.github.io">
-  <img class="avatar" src="https://WindFgg.github.io/images/avatar.png?v=1646311018156" alt="">
-  </a>
-  <h1 class="site-title">
-    Gridea
-  </h1>
-  <p class="site-description">
-    贵有恒 何必三更眠五更起</br>
-最无益 只怕一日曝十日寒
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://WindFgg.github.io">
+        <img class="avatar" src="https://WindFgg.github.io/images/avatar.png?v=1646311505506" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://WindFgg.github.io">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
         <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              Frp的使用指南
-            </h2>
-            <div class="post-info">
-              <span>
-                2022-02-18
-              </span>
-              <span>
-                7 min read
-              </span>
-              
-                <a href="https://WindFgg.github.io/tag/LxRztxjWW/" class="post-tag">
-                  # frp
-                </a>
-              
-            </div>
+          
+          <h2 class="post-title">Frp的使用指南</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-12-24</span>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <h2 id="简介">简介</h2>
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://WindFgg.github.io/tag/cRQchQ-No/">
+                    教程
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://WindFgg.github.io/tag/LxRztxjWW/">
+                    frp
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <h2 id="简介">简介</h2>
 <p>frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议。可以将内网服务以安全、便捷的方式通过具有公网 IP 节点的中转暴露到公网。Frp分为服务端和客户端。</p>
 <p>Github : <strong>https://github.com/fatedier/frp</strong></p>
 <p>中文文档：<strong>https://gofrp.org/docs/</strong></p>
@@ -280,144 +295,88 @@ winsw.exe refresh ## 刷新服务属性
 <h4 id=""></h4>
 <h3 id="-2"></h3>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
-<li><a href="#frp-server-%E6%9C%8D%E5%8A%A1%E7%AB%AF">Frp Server 服务端</a>
-<ul>
-<li><a href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">配置文件</a></li>
-<li><a href="#%E5%91%BD%E4%BB%A4">命令</a>
-<ul>
-<li><a href="#liunx">liunx</a>
-<ul>
-<li><a href="#nohup">nohup</a></li>
-<li><a href="#service">service</a></li>
-</ul>
-</li>
-<li><a href="#windows">windows</a></li>
-<li><a href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4">常用命令</a></li>
-<li><a href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-2">配置文件</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#frp-client-%E5%AE%A2%E6%88%B7%E7%AB%AF">Frp Client 客户端</a>
-<ul>
-<li><a href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-3">配置文件</a></li>
-<li><a href="#%E5%91%BD%E4%BB%A4-2">命令</a>
-<ul>
-<li><a href="#liunx-2">Liunx</a>
-<ul>
-<li><a href="#nohup-2">nohup</a></li>
-<li><a href="#service-2">service</a></li>
-</ul>
-</li>
-<li><a href="#windows-2">windows</a></li>
-<li><a href="#%E5%91%BD%E4%BB%A4-3">命令</a></li>
-<li><a href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-4">配置文件</a></li>
-<li></li>
-</ul>
-</li>
-<li></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
 
         
           <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://WindFgg.github.io/post/cfgithubproxy/">
+            <a class="purple-link" href="https://WindFgg.github.io/post/github-ti-jiao-ri-zhi-biao-qing-tu-biao/">
               <h3 class="post-title">
-                Cloudflare Worker 搭建 Github代理
+                下一篇：GitHub提交日志表情图标
               </h3>
             </a>
           </div>
+          
+      </div>
+
+      
         
 
         
-          
+          <div id="disqus_thread"></div>
+        
+      
 
-          
-            <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css">
-<script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+      <div class="site-footer">
+  <div class="slogan">贵有恒 何必三更眠五更起</br>
+最无益 只怕一日曝十日寒</div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/WindFgg" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  <a href="https://github.com/WindFgg" target="_blank">Feng_Yun</a> | <a class="rss" href="https://WindFgg.github.io/atom.xml" target="_blank">RSS</a>
+</div>
 
-<div id="disqus_thread"></div>
 
-<script>
+    </div>
+    <script type="application/javascript">
 
-var options = {
-  shortname: '',
-  apikey: '9eq0znZ8tK5TdyfXQ0M9xn2OqZO7oLb1KcbtLlysyYUxRnFxJJO7xNa34oxFm7QD',
-}
-if ('') {
-  options.api = ''
-}
-var dsqjs = new DisqusJS(options)
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
 
-          
-        
 
-        <div class="site-footer">
-  <a href="https://github.com/WindFgg" target="_blank">Feng_Yun</a>
-  <a class="rss" href="https://WindFgg.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
-</div>
 
-      </div>
-    </div>
+  
 
+  
+    <script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
     <script>
-      hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
-
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
-
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
-
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
+    var options = {
+      shortname: '',
+      apikey: '9eq0znZ8tK5TdyfXQ0M9xn2OqZO7oLb1KcbtLlysyYUxRnFxJJO7xNa34oxFm7QD',
+    }
+    if ('') {
+      options.api = ''
+    }
+    var dsqjs = new DisqusJS(options)
 
     </script>
+  
+
+
+
+
   </body>
 </html>

@@ -1,141 +1,116 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>键盘 KeyCode对照表 | Gridea</title>
-<link rel="shortcut icon" href="https://WindFgg.github.io/favicon.ico?v=1646311018156">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<meta name="description" content="贵有恒 何必三更眠五更起&lt;/br&gt;
+最无益 只怕一日曝十日寒">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://WindFgg.github.io/favicon.ico?v=1646311505506">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://WindFgg.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="键盘 KeyCode对照表 | Gridea - Atom Feed" href="https://WindFgg.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+  
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css" />
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
-    <meta name="description" content="字母和数字键的键码值(KeyCode)
-
-
-
-按键
-KeyCode
-按键
-KeyCode
-按键
-KeyCode
-按键
-KeyCode
-
-
-
-
-A
-65
-J
-74
-S
-83
-1
-49
-
-
-B
-66
-K
-75
-T
-84
-2
-50
-
-
-C
-67
-..." />
-    <meta name="keywords" content="键盘,key_code" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://WindFgg.github.io">
-  <img class="avatar" src="https://WindFgg.github.io/images/avatar.png?v=1646311018156" alt="">
-  </a>
-  <h1 class="site-title">
-    Gridea
-  </h1>
-  <p class="site-description">
-    贵有恒 何必三更眠五更起</br>
-最无益 只怕一日曝十日寒
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://WindFgg.github.io">
+        <img class="avatar" src="https://WindFgg.github.io/images/avatar.png?v=1646311505506" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://WindFgg.github.io">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
         <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              键盘 KeyCode对照表
-            </h2>
-            <div class="post-info">
-              <span>
-                2022-03-03
-              </span>
-              <span>
-                2 min read
-              </span>
-              
-                <a href="https://WindFgg.github.io/tag/baaPqbdI7/" class="post-tag">
-                  # 键盘
-                </a>
-              
-                <a href="https://WindFgg.github.io/tag/K08qYKarD8/" class="post-tag">
-                  # key_code
-                </a>
-              
-            </div>
+          
+          <h2 class="post-title">键盘 KeyCode对照表</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-03-03</span>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <h2 id="字母和数字键的键码值keycode">字母和数字键的键码值(KeyCode)</h2>
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://WindFgg.github.io/tag/baaPqbdI7/">
+                    键盘
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://WindFgg.github.io/tag/K08qYKarD8/">
+                    key_code
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <h2 id="字母和数字键的键码值keycode">字母和数字键的键码值(KeyCode)</h2>
 <table>
 <thead>
 <tr>
@@ -514,109 +489,88 @@ C
 </tbody>
 </table>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%AD%97%E6%AF%8D%E5%92%8C%E6%95%B0%E5%AD%97%E9%94%AE%E7%9A%84%E9%94%AE%E7%A0%81%E5%80%BCkeycode">字母和数字键的键码值(KeyCode)</a></li>
-<li><a href="#%E6%95%B0%E5%AD%97%E9%94%AE%E5%92%8C%E5%8A%9F%E8%83%BD%E9%94%AE%E7%9A%84%E9%94%AE%E7%A0%81%E5%80%BCkeycode">数字键和功能键的键码值(KeyCode)</a></li>
-<li><a href="#%E6%8E%A7%E5%88%B6%E9%94%AE%E7%9A%84%E9%94%AE%E7%A0%81%E5%80%BCkeycode">控制键的键码值(KeyCode)</a></li>
-<li><a href="#%E5%A4%9A%E5%AA%92%E4%BD%93%E9%94%AE%E7%9A%84%E9%94%AE%E7%A0%81%E5%80%BCkeycode">多媒体键的键码值(KeyCode)</a></li>
-</ul>
-</li>
-</ul>
-
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
 
         
           <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://WindFgg.github.io/post/frp/">
+            <a class="purple-link" href="https://WindFgg.github.io/post/cfgithubproxy/">
               <h3 class="post-title">
-                Frp的使用指南
+                下一篇：Cloudflare Worker 搭建 Github代理
               </h3>
             </a>
           </div>
+          
+      </div>
+
+      
         
 
         
-          
+          <div id="disqus_thread"></div>
+        
+      
 
-          
-            <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css">
-<script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+      <div class="site-footer">
+  <div class="slogan">贵有恒 何必三更眠五更起</br>
+最无益 只怕一日曝十日寒</div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/WindFgg" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  <a href="https://github.com/WindFgg" target="_blank">Feng_Yun</a> | <a class="rss" href="https://WindFgg.github.io/atom.xml" target="_blank">RSS</a>
+</div>
 
-<div id="disqus_thread"></div>
 
-<script>
+    </div>
+    <script type="application/javascript">
 
-var options = {
-  shortname: '',
-  apikey: '9eq0znZ8tK5TdyfXQ0M9xn2OqZO7oLb1KcbtLlysyYUxRnFxJJO7xNa34oxFm7QD',
-}
-if ('') {
-  options.api = ''
-}
-var dsqjs = new DisqusJS(options)
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
 
-          
-        
 
-        <div class="site-footer">
-  <a href="https://github.com/WindFgg" target="_blank">Feng_Yun</a>
-  <a class="rss" href="https://WindFgg.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
-</div>
 
-      </div>
-    </div>
+  
 
+  
+    <script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
     <script>
-      hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
-
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
-
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
-
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
+    var options = {
+      shortname: '',
+      apikey: '9eq0znZ8tK5TdyfXQ0M9xn2OqZO7oLb1KcbtLlysyYUxRnFxJJO7xNa34oxFm7QD',
+    }
+    if ('') {
+      options.api = ''
+    }
+    var dsqjs = new DisqusJS(options)
 
     </script>
+  
+
+
+
+
   </body>
 </html>

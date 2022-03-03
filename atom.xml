@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://WindFgg.github.io</id>
     <title>Gridea</title>
-    <updated>2022-03-03T12:36:59.871Z</updated>
+    <updated>2022-03-03T12:45:07.861Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://WindFgg.github.io"/>
     <link rel="self" href="https://WindFgg.github.io/atom.xml"/>
@@ -398,11 +398,41 @@
 ]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Cloudflare Worker 搭建 Github代理]]></title>
+        <id>https://WindFgg.github.io/post/cfgithubproxy/</id>
+        <link href="https://WindFgg.github.io/post/cfgithubproxy/">
+        </link>
+        <updated>2022-01-19T17:23:49.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="前言">前言</h2>
+<p>现在都流行无服务器函数，作为大牌CDN提供商<strong>cloud flare</strong>自然不甘落后推出了worker服务。免费用户有10万请求/每天 的额度，搭配上一些小型项目比如jsproxy就显得格外香甜。</p>
+<h3 id="jsproxy简介">jsproxy简介</h3>
+<p>jsproxy是 一个基于浏览器端 JS 实现的在线代理 。</p>
+<p>传统在线代理都是在服务端替换 HTML/JS/CSS 等资源中的 URL。这不仅需要对内容做大量的分析和处理，还需对流量进行解压和再压缩，消耗大量 CPU 资源。并且由于逻辑较复杂，通常使用 Python/PHP 等编程语言自己实现。</p>
+<p>为降低服务端开销，本项目使用浏览器的一个黑科技 —— Service Worker。它能让 JS 拦截网页产生的请求，并能自定义返回内容，相当于在浏览器内部实现一个反向代理。这使得绝大部分的内容处理都可以在浏览器上完成，服务器只需纯粹的转发流量。</p>
+<p>由于原项目还是需要海外服务器，所以之前也只是知道但是懒得搭建，毕竟这个对我的作用有限。但是后来作者针对CF的worker项目单独做了个<br>
+CloudFlare Worker 版。这个版本对于没有海外服务器或者是对于海外网站浏览需求量较低水平的人来说是相当不错的了。每天10万次请求也足以应对个人使用或者是小范围分享了。</p>
+<h2 id="使用方法">使用方法</h2>
+<p>没有CF账号的先注册一个：https://dash.cloudflare.com/</p>
+<h3 id="创建worker">创建worker</h3>
+<p>直接点击Star Build https://workers.cloudflare.com/</p>
+<h3 id="复制js">复制js</h3>
+<p><img src="https://ae01.alicdn.com/kf/Hffa26636a6a8465a97e0817b25d44b30B.png" alt="image.png" loading="lazy"><br>
+填写自己喜爱的二级域名然后创建worker<br>
+点击创建服务 成功之后点进去有个快速编辑<br>
+进入github项目的<a href="https://github.com/yangmyc/jsproxy/blob/master/cf-worker/index.js">index.js</a>,复制代码。<br>
+清除示范代码后粘贴进去<br>
+<img src="https://ae02.alicdn.com/kf/H5b01a73b61034b259b134f072ec7f505X.png" alt="image.png" loading="lazy"><br>
+点击左下角保存并部署 还可以在预览页面看到你的worker</p>
+<p>收藏你的worker的域名或者记住就可以随时随地用了</p>
+<p>你可以使用该代理加速下载github仓库或者下载github上的文件</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Frp的使用指南]]></title>
         <id>https://WindFgg.github.io/post/frp/</id>
         <link href="https://WindFgg.github.io/post/frp/">
         </link>
-        <updated>2022-02-17T17:25:12.000Z</updated>
+        <updated>2021-12-23T17:25:12.000Z</updated>
         <content type="html"><![CDATA[<h2 id="简介">简介</h2>
 <p>frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议。可以将内网服务以安全、便捷的方式通过具有公网 IP 节点的中转暴露到公网。Frp分为服务端和客户端。</p>
 <p>Github : <strong>https://github.com/fatedier/frp</strong></p>
@@ -590,33 +620,595 @@ winsw.exe refresh ## 刷新服务属性
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Cloudflare Worker 搭建 Github代理]]></title>
-        <id>https://WindFgg.github.io/post/cfgithubproxy/</id>
-        <link href="https://WindFgg.github.io/post/cfgithubproxy/">
+        <title type="html"><![CDATA[GitHub提交日志表情图标]]></title>
+        <id>https://WindFgg.github.io/post/github-ti-jiao-ri-zhi-biao-qing-tu-biao/</id>
+        <link href="https://WindFgg.github.io/post/github-ti-jiao-ri-zhi-biao-qing-tu-biao/">
         </link>
-        <updated>2022-02-17T17:23:49.000Z</updated>
+        <updated>2021-12-01T12:37:38.000Z</updated>
+        <content type="html"><![CDATA[<p>git 提交可以使用 emoji 表情包，在 <a href="https://emojipedia.org/">emojipedia</a> 几乎可以找到所有的表情使用方式，不过GitHub上有一套约定俗成的emoji使用规范，可以通过如下的表格进行快速查看。</p>
+<table>
+<thead>
+<tr>
+<th>Emoji</th>
+<th>Emoji代码</th>
+<th>Commit说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🎨（调色板）</td>
+<td><code>:art:</code></td>
+<td>改进代码结构/代码格式</td>
+</tr>
+<tr>
+<td>⚡（闪电）</td>
+<td><code>:zap:</code></td>
+<td>提升性能</td>
+</tr>
+<tr>
+<td>🐎（赛马）</td>
+<td><code>:racehorse:</code></td>
+<td>提升性能</td>
+</tr>
+<tr>
+<td>🔥（火焰）</td>
+<td><code>:fire:</code></td>
+<td>移除代码或文件</td>
+</tr>
+<tr>
+<td>🐛（bug）</td>
+<td><code>:bug:</code></td>
+<td>修复bug</td>
+</tr>
+<tr>
+<td>🚑（急救车）</td>
+<td><code>:ambulance:</code></td>
+<td>重要补丁</td>
+</tr>
+<tr>
+<td>✨（火花）</td>
+<td><code>:sparkles:</code></td>
+<td>引入新功能</td>
+</tr>
+<tr>
+<td>📝（备忘录）</td>
+<td><code>:memo:</code></td>
+<td>撰写文档</td>
+</tr>
+<tr>
+<td>🚀（火箭）</td>
+<td><code>:rocket:</code></td>
+<td>部署功能</td>
+</tr>
+<tr>
+<td>💄（口红）</td>
+<td><code>:lipstick:</code></td>
+<td>更新UI和样式文件</td>
+</tr>
+<tr>
+<td>🎉（庆祝）</td>
+<td><code>:tada:</code></td>
+<td>初次提交</td>
+</tr>
+<tr>
+<td>✅（白色复选框）</td>
+<td><code>:white_check_mark:</code></td>
+<td>更新测试</td>
+</tr>
+<tr>
+<td>🔒（锁）</td>
+<td><code>:lock:</code></td>
+<td>修复安全问题</td>
+</tr>
+<tr>
+<td>🍎（苹果）</td>
+<td><code>:apple:</code></td>
+<td>修复macOS下的问题</td>
+</tr>
+<tr>
+<td>🐧（企鹅）</td>
+<td><code>:penguin:</code></td>
+<td>修复Linux下的问题</td>
+</tr>
+<tr>
+<td>🏁（旗帜）</td>
+<td><code>:checkered_flag:</code></td>
+<td>修复Windows下的问题</td>
+</tr>
+<tr>
+<td>🤖（机器人）</td>
+<td><code>:robot:</code></td>
+<td>修复Android下的问题</td>
+</tr>
+<tr>
+<td>🍏（绿苹果）</td>
+<td><code>:green_apple:</code></td>
+<td>修复iOS下的问题</td>
+</tr>
+<tr>
+<td>🔖（书签）</td>
+<td><code>:bookmark:</code></td>
+<td>发行/版本标签</td>
+</tr>
+<tr>
+<td>🚨（警车灯）</td>
+<td><code>:rotating_light:</code></td>
+<td>移除linter警告</td>
+</tr>
+<tr>
+<td>🚧（施工）</td>
+<td><code>:construction:</code></td>
+<td>工作进行中</td>
+</tr>
+<tr>
+<td>👷（工人）</td>
+<td><code>:construction_worker:</code></td>
+<td>添加CI构建系统</td>
+</tr>
+<tr>
+<td>💚（绿心）</td>
+<td><code>:green_heart:</code></td>
+<td>修复CI构建问题</td>
+</tr>
+<tr>
+<td>⬆️（上升箭头）</td>
+<td><code>:arrow_up:</code></td>
+<td>升级依赖</td>
+</tr>
+<tr>
+<td>⬇️（下降箭头）</td>
+<td><code>:arrow_down:</code></td>
+<td>降级依赖</td>
+</tr>
+<tr>
+<td>📌（图钉）</td>
+<td><code>:pushpin:</code></td>
+<td>将依赖项固定到特定版本</td>
+</tr>
+<tr>
+<td>📈（上升趋势图）</td>
+<td><code>:chart_with_upwards_trend:</code></td>
+<td>添加分析或跟踪代码</td>
+</tr>
+<tr>
+<td>♻️（回收）</td>
+<td><code>:recycle:</code></td>
+<td>重构代码</td>
+</tr>
+<tr>
+<td>🐳（鲸鱼）</td>
+<td><code>:whale:</code></td>
+<td>Docker相关工作</td>
+</tr>
+<tr>
+<td>🌐（带子午线的地球仪）</td>
+<td><code>:globe_with_meridians:</code></td>
+<td>国际化与本地化</td>
+</tr>
+<tr>
+<td>➕（加号）</td>
+<td><code>:heavy_plus_sign:</code></td>
+<td>增加一个依赖</td>
+</tr>
+<tr>
+<td>➖（减号）</td>
+<td><code>:heavy_minus_sign:</code></td>
+<td>减少一个依赖</td>
+</tr>
+<tr>
+<td>🔧（扳手）</td>
+<td><code>:wrench:</code></td>
+<td>修改配置文件</td>
+</tr>
+<tr>
+<td>🔨（锤子）</td>
+<td><code>:hammer:</code></td>
+<td>重大重构</td>
+</tr>
+<tr>
+<td>✏️（铅笔）</td>
+<td><code>:pencil2:</code></td>
+<td>修复typo</td>
+</tr>
+<tr>
+<td>💩（粑粑…）</td>
+<td><code>:poop:</code></td>
+<td>写了辣鸡代码需要优化</td>
+</tr>
+<tr>
+<td>⏪（倒带）</td>
+<td><code>:rewind:</code></td>
+<td>恢复更改</td>
+</tr>
+<tr>
+<td>🔀（交叉向右的箭头）</td>
+<td><code>:twisted_rightwards_arrows:</code></td>
+<td>合并分支</td>
+</tr>
+<tr>
+<td>📦（包裹）</td>
+<td><code>:package:</code></td>
+<td>更新编译的文件或包</td>
+</tr>
+<tr>
+<td>👽（外星人）</td>
+<td><code>:alien:</code></td>
+<td>由于外部API更改而更新代码</td>
+</tr>
+<tr>
+<td>🚚（货车）</td>
+<td><code>:truck:</code></td>
+<td>移动或者重命名文件</td>
+</tr>
+<tr>
+<td>📄（正面朝上的页面）</td>
+<td><code>:page_facing_up:</code></td>
+<td>增加或更新许可证书</td>
+</tr>
+<tr>
+<td>💥（爆炸）</td>
+<td><code>:boom:</code></td>
+<td>引入突破性的变化</td>
+</tr>
+<tr>
+<td>🍱（铅笔）</td>
+<td><code>:bento:</code></td>
+<td>增加或更新资源</td>
+</tr>
+<tr>
+<td>👌（OK手势）</td>
+<td><code>:ok_hand:</code></td>
+<td>由于代码审查更改而更新代码</td>
+</tr>
+<tr>
+<td>♿（轮椅）</td>
+<td><code>:wheelchair:</code></td>
+<td>改善无障碍交互</td>
+</tr>
+<tr>
+<td>💡（灯泡）</td>
+<td><code>:bulb:</code></td>
+<td>给代码添加注释</td>
+</tr>
+<tr>
+<td>🍻（啤酒）</td>
+<td><code>:beers:</code></td>
+<td>醉醺醺地写代码…</td>
+</tr>
+<tr>
+<td>💬（消息气泡）</td>
+<td><code>:speech_balloon:</code></td>
+<td>更新文本文档</td>
+</tr>
+<tr>
+<td>🗃️（卡片文件盒）</td>
+<td><code>:card_file_box:</code></td>
+<td>执行与数据库相关的更改</td>
+</tr>
+<tr>
+<td>🔊（音量大）</td>
+<td><code>:loud_sound:</code></td>
+<td>增加日志</td>
+</tr>
+<tr>
+<td>🔇（静音）</td>
+<td><code>:mute:</code></td>
+<td>移除日志</td>
+</tr>
+<tr>
+<td>👥（轮廓中的半身像）</td>
+<td><code>:busts_in_silhouette:</code></td>
+<td>增加贡献者</td>
+</tr>
+<tr>
+<td>🚸（孩童通行）</td>
+<td><code>:children_crossing:</code></td>
+<td>优化用户体验、可用性</td>
+</tr>
+<tr>
+<td>🏗️（建筑建造）</td>
+<td><code>:building_construction:</code></td>
+<td>结构变动</td>
+</tr>
+<tr>
+<td>📱（iPhone）</td>
+<td><code>:iphone:</code></td>
+<td>做响应式设计</td>
+</tr>
+<tr>
+<td>🤡（小丑脸）</td>
+<td><code>:clown_face:</code></td>
+<td>嘲弄事物（直译，这个没明白）</td>
+</tr>
+<tr>
+<td>🥚（鸡蛋）</td>
+<td><code>:egg:</code></td>
+<td>增加彩蛋</td>
+</tr>
+<tr>
+<td>🙈（看不见邪恶）</td>
+<td><code>:see_no_evil:</code></td>
+<td>增加或更改gitignore</td>
+</tr>
+<tr>
+<td>📸（照相机闪光灯）</td>
+<td><code>:camera_flash:</code></td>
+<td>增加或更新截图</td>
+</tr>
+<tr>
+<td>⚗️（蒸馏器）</td>
+<td><code>:alembic:</code></td>
+<td>尝试新东西</td>
+</tr>
+<tr>
+<td>🔍（放大镜）</td>
+<td><code>:mag:</code></td>
+<td>SEO优化</td>
+</tr>
+<tr>
+<td>☸️（船的方向盘）</td>
+<td><code>:wheel_of_dharma:</code></td>
+<td>关于Kubernetes的工作</td>
+</tr>
+<tr>
+<td>🏷️（标签）</td>
+<td><code>:label:</code></td>
+<td>增加类型（FLow、Typescript）</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Socket的一次探索尝试]]></title>
+        <id>https://WindFgg.github.io/post/socket-de-yi-ci-tan-suo-chang-shi/</id>
+        <link href="https://WindFgg.github.io/post/socket-de-yi-ci-tan-suo-chang-shi/">
+        </link>
+        <updated>2021-11-30T12:40:28.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="前言">前言</h2>
+<p>因最近老师提出提出了<code>Socket</code>是否可以与<code>WebSocket</code>通讯的问题,让我去了解尝试一下,在网上搜索了一些有关于<code>Socket</code>和<code>WebSocket</code>的文章之后,便写下了这篇文章。在日常开发场景中,如果不是一个非常大型的系统,需要采用一些定制化的需求,我们只用粗略的了解这些协议的信息即可,没必要去深究这些协议.在本文中我列举了<code>WebSocket</code>和<code>Socket</code>以及<code>HTTP</code> 的简介以及他们的不同.随后我使用<a href="#C#%E5%AE%9E%E7%8E%B0">C#实现</a>了简单的Socket和WebSocket的列子。</p>
+<h2 id="socket">Socket</h2>
+<h3 id="简介">简介</h3>
+<p><code>Socket</code>是<a href="#OSI%E6%A8%A1%E5%9E%8B">OSI模型</a>中应用层与<a href="#TCP/IP%E5%8D%8F%E8%AE%AE">TCP/IP协议</a>族通信的中间软件抽象层，它是一组<code>接口</code>。在设计模式中，<code>Socket</code>其实就是一个门面模式，它把复杂的<a href="https://baike.baidu.com/item/TCP%2FIP%E5%8D%8F%E8%AE%AE/212915?fromtitle=tcp%2Fip&amp;fromid=214077&amp;fr=aladdin">TCP/IP协议</a>隐藏在<code>Socket</code>接口后面，对用户来说，一组简单的接口就是全部，让<code>Socket</code>去组织数据，以符合指定的协议。<code>Socket</code>又称套接字。</p>
+<p>一个生活中的场景。你要打电话给一个朋友，先拨号，朋友听到电话铃声后提起电话，这时你和你的朋友就建立起了连接，就可以讲话了。等交流结束，挂断电话结束此次交谈。</p>
+<p><strong>我所理解的Socket就是为了更方便使用TCP协议或者UDP协议的实现封装和应用。是抽象接口</strong></p>
+<h3 id="参考文献">参考文献</h3>
+<ol>
+<li><a href="https://blog.csdn.net/pashanhu6402/article/details/96428887">Socket原理</a></li>
+<li>百度百科：<a href="https://baike.baidu.com/item/%E5%A5%97%E6%8E%A5%E5%AD%97/9637606?fromtitle=socket&amp;fromid=281150&amp;fr=aladdin">Scoket(套接字)</a></li>
+</ol>
+<h2 id="websocket">WebSocket</h2>
+<h3 id="简介-2">简介</h3>
+<p><code>WebSocket</code>是HTML5一种新的协议。它实现了浏览器与服务器全双工通信(full-duplex)。一开始的握手需要借助HTTP请求完成(又称协议升级（HTTP-&gt;Websocket）。它的最大特点就是，服务器可以主动向客户端推送信息，客户端也可以主动向服务器发送信息，是真正的双向平等对话，属于<a href="https://en.wikipedia.org/wiki/Push_technology">服务器推送技术</a>的一种。目的：即时通讯，替代轮询</p>
+<p><strong>我所理解的WebSocket是双向通信协议，可以双向发送或接受信息。他的出现是为了替代HTTP协议长轮询的效率低下等问题进行了解决</strong></p>
+<h3 id="参考文献-2">参考文献</h3>
+<ol>
+<li>阮一峰：<a href="https://www.ruanyifeng.com/blog/2017/05/websocket.html">WebSocket 教程</a></li>
+<li><a href="https://www.cnblogs.com/cjeandailynotes/p/12594824.html">看完让你彻底搞懂Websocket原理</a></li>
+<li><a href="https://baijiahao.baidu.com/s?id=1713307876537918339&amp;wfr=spider&amp;for=pc">万字长文，一篇吃透WebSocket：概念、原理、易错常识、动手实践</a></li>
+</ol>
+<h2 id="http">HTTP</h2>
+<h3 id="简介-3">简介</h3>
+<p><code>HTTP</code>协议(超文本传输协议HyperText Transfer Protocol)，它是基于TCP协议的应用层传输协议，简单来说就是客户端和服务端进行数据传输的一种规则。<code>HTTP</code> 是一种<strong>无状态</strong> (stateless) 协议, <code>HTTP</code>协议本身不会对发送过的请求和相应的通信状态进行持久化处理。这样做的目的是为了保持HTTP协议的简单性，从而能够快速处理大量的事务, 提高效率。然而，在许多应用场景中，我们需要保持用户登录的状态或记录用户购物车中的商品。由于<code>HTTP</code>是无状态协议，所以必须引入一些技术来记录管理状态，例如<code>Cookie</code>。</p>
+<h3 id="参考文献-3">参考文献</h3>
+<p>1.知乎:<a href="https://zhuanlan.zhihu.com/p/45173862">深入理解HTTP协议</a></p>
+<h3 id="三种协议的区别">三种协议的区别</h3>
+<p>1.应用层协议</p>
+<ul>
+<li>DNS</li>
+<li>HTTP</li>
+<li>FTP</li>
+<li>SMTP</li>
+<li>WebSocket</li>
+<li>SNMP</li>
+</ul>
+<p>2.运输层协议</p>
+<ul>
+<li>TCP</li>
+<li>UDP</li>
+</ul>
+<p><code>Socket</code>其实并不是一个协议,是一个<code>抽象概念</code>，是为了方便使用<code>TCP协议</code>或<code>UDP协议</code>而抽象出来的一层，是位于应用层和传输控制层之间的一组接口。</p>
+<p><code>WebSocket</code>则是一个典型的应用层协议。<code>Socket</code>是传输控制层协议，<code>WebSocket</code>是应用层协议。我所理解的<code>WebSocket</code>就是对<code>Socket</code>接口的一种实现,但是他又跟<code>Socket</code>使用方面，完全两个东西.<code>WebSocket</code>一开始的握手需要借助HTTP请求完成,又称<code>协议升级</code>（HTTP-&gt;Websocket）</p>
+<p><code>Http</code>是一种<strong>无状态</strong> 协议, <code>HTTP</code>协议本身不会对发送过的请求和相应的通信状态进行持久化处理。</p>
+<h3 id="参考文献-4">参考文献</h3>
+<ol>
+<li><a href="https://www.cnblogs.com/aspirant/p/11334957.html">Http、Socket、WebSocket之间联系与区别 </a></li>
+</ol>
+<h3 id="c实现">C#实现</h3>
+<p><code>C#</code> 中提供了</p>
+<ul>
+<li>
+<p><code>Socket</code>类 ,是抽象概念是接口,可以基于它实现<code>TCP</code>传输 或 <code>UDP</code>传输</p>
+</li>
+<li>
+<p>基于<code>Socket</code>类 ,使用<code>TCP协议</code>封装的<code>TcpClient</code>类和<code>TCPListener</code> 类</p>
+</li>
+<li>
+<p>基于<code>Socket</code>类 ,使用<code>UDP协议</code>封装的<code>UdpClient</code>类</p>
+</li>
+</ul>
+<p>在使用<code>Socket</code>遇到了一个问题<code>粘包</code></p>
+<p>(<strong>严谨一点来说并不叫粘包,TCP协议是流式协议,所谓流式协议，即协议的内容是像流水一样的字节流，内容与内容之间没有明确的分界标志，需要我们人为地去给这些协议划分边界。客户端发送数据时，发送的buffer为实际发送内容的长度，当发送数据的长度小于服务端接收buffer的长度时，多个发送内容就会存放到服务端的buffer中，导致上次发送的数据和本次的发送的数据连在一起。</strong>)</p>
+<p>解决的方法也有很多(参考文献:<a href="https://www.zhihu.com/question/20210025?sort=created">怎么解决TCP网络传输「粘包」问题？ - 知乎 携程旅行网 资深研发工程师的回答 </a>)</p>
+<ol>
+<li>
+<p>固定包长的数据包</p>
+</li>
+<li>
+<p>以指定字符（串）为包的结束标志</p>
+</li>
+<li>
+<p>包头 + 包体格式</p>
+</li>
+</ol>
+<p>这里我是推荐大家使用第二种和第三种方式,第二种方式需要使用一些特定的字符进行划分每段数据的结束标志,遇到原消息种含有结束标志的时候,就需要对这些字符做转码或者转义操作，以免被接收方错误地当成包结束标志而误解析。第三章就是需要自己定义<strong>包头 + 包体格式</strong>,在日常开发中,还是要根据自己的实际需求去选择自己所使用的方法.</p>
+<h4 id="源码">源码</h4>
+<p>https://github.com/WindFgg/.NETSocket</p>
+<h2 id="总结">总结</h2>
+<p>最后总结出来C#的<code>Socket</code>类可以封装为<code>WebSocket</code> <code>WebSocket</code>自带心跳</p>
+<p><code>HTTP</code> <code>WebSocket</code> <code>Tcp</code> <code>UDP</code>都可以使用C#<code>Socket</code>类进行封装,C#有封装好的。</p>
+<p>又因为他们WebSocket和Socket在使用方面,完全不是一个东西。出发层面就错了。</p>
+<h2 id="拓展资料">拓展资料</h2>
+<h3 id="osi模型">OSI模型</h3>
+<h4 id="来源">来源</h4>
+<p>OSI（Open System Interconnect），即开放式系统互联。 一般都叫OSI参考模型，是ISO（国际标准化组织）组织在1985年研究的网络互连模型。 ISO为了更好的使网络应用更为普及，推出了OSI参考模型。其含义就是推荐所有公司使用这个规范来控制网络。这样所有公司都有相同的规范，就能互联了。</p>
+<h4 id="osi七层模型的划分">OSI七层模型的划分</h4>
+<p>OSI定义了网络互连的七层框架（物理层、数据链路层、网络层、传输层、会话层、表示层、应用层），即ISO开放互连系统参考模型。如下图。每一层实现各自的功能和协议，并完成与相邻层的接口通信。OSI的服务定义详细说明了各层所提供的服务。某一层的服务就是该层及其下各层的一种能力，它通过接口提供给更高一层。各层所提供的服务与这些服务是怎么实现的无关。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/11/30/okj4KXOTHQ18gbd.png" alt="" loading="lazy"></figure>
+<h4 id="参考文献-5">参考文献</h4>
+<ol>
+<li>
+<p>百度百科：<a href="https://baike.baidu.com/item/OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B">OSI参考模型</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/wdkirchhoff/article/details/43915825">HCNA-HNTD——以太网帧结构</a></p>
+</li>
+<li>
+<p>引用博客：<a href="https://www.cnblogs.com/qishui/p/5428938.html">OSI七层模型与TCP/IP五层模型</a></p>
+</li>
+</ol>
+<h3 id="tcpip协议">TCP/IP协议</h3>
+<h4 id="简介-4">简介</h4>
+<p><code>TCP/IP协议簇</code>， TCP/IP（Transmission Control Protocol/Internet Protocol）即传输控制协议/网间协议，定义了主机如何连入因特网及数据如何再它们之间传输的标准，</p>
+<p><strong>从字面意思来看TCP/IP是TCP和IP协议的合称，但实际上TCP/IP协议是指因特网整个TCP/IP协议簇</strong>。不同于ISO模型的七个分层，TCP/IP协议参考模型把所有的TCP/IP系列协议归类到四个抽象层中</p>
+<h4 id="tcpip四层模型以及五层模型">TCP/IP四层模型以及五层模型</h4>
+<h5 id="简介-5">简介</h5>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2021/12/01/4VqdWDlwvTkS1zL.png" alt="" loading="lazy"></figure>
+<p>TCP/IP四层模型是OSI七层模型的简化版，但是大致的核心内容是很类似的。虽然OSIG更容易开发和排除故障，但是相较于简洁的TCP/IP，显得庞大而笨拙。十分有趣的是，OSI虽然是官方提出的，但是由于一些原因，在它被完善之前，由民间开发的TCP/IP早已投入实际使用了，所以它几乎是只存在与教科书中，并没有大范围地投入使用。</p>
+<h5 id="tcpip四层参考模型">TCP/IP四层参考模型</h5>
+<p>TCP/IP四层参考模型从上到下可分为四层：<br>
+4、应用层（Application）：为用户提供所需要的各种服务<br>
+3、传输层（Transport）：为应用层实体提供端到端的通信功能，保证了数据包的顺序传送及数据的完整性<br>
+2、网际层（Internet）：主要解决主机到主机的通信问题<br>
+1、网络接口层（Network Access）：负责监视数据在主机和网络之间的交换</p>
+<h5 id="五层tcpip协议的体系结构">五层TCP/IP协议的体系结构</h5>
+<p>五层协议只是OSI和TCP/IP的综合。是专门为介绍网络原理而设计的，与TCP/IP四层模型唯一不同的就是将网络接口层分为了数据链路层和物理层，在实际的应用中还是使用TCP/IP四层模型的。</p>
+<h4 id="参考文献-6">参考文献</h4>
+<p>1.百度百科：<a href="https://baike.baidu.com/item/TCP%2FIP%E5%8D%8F%E8%AE%AE/212915?fromtitle=tcp%2Fip&amp;fromid=214077&amp;fr=aladdin">TCP/IP协议</a></p>
+<p>2.参考博客：<a href="https://www.cnblogs.com/wxd0108/p/7597216.html">OSI七层协议模型、TCP/IP四层模型和五层协议体系结构之间的关系 </a></p>
+]]></summary>
         <content type="html"><![CDATA[<h2 id="前言">前言</h2>
-<p>现在都流行无服务器函数，作为大牌CDN提供商<strong>cloud flare</strong>自然不甘落后推出了worker服务。免费用户有10万请求/每天 的额度，搭配上一些小型项目比如jsproxy就显得格外香甜。</p>
-<h3 id="jsproxy简介">jsproxy简介</h3>
-<p>jsproxy是 一个基于浏览器端 JS 实现的在线代理 。</p>
-<p>传统在线代理都是在服务端替换 HTML/JS/CSS 等资源中的 URL。这不仅需要对内容做大量的分析和处理，还需对流量进行解压和再压缩，消耗大量 CPU 资源。并且由于逻辑较复杂，通常使用 Python/PHP 等编程语言自己实现。</p>
-<p>为降低服务端开销，本项目使用浏览器的一个黑科技 —— Service Worker。它能让 JS 拦截网页产生的请求，并能自定义返回内容，相当于在浏览器内部实现一个反向代理。这使得绝大部分的内容处理都可以在浏览器上完成，服务器只需纯粹的转发流量。</p>
-<p>由于原项目还是需要海外服务器，所以之前也只是知道但是懒得搭建，毕竟这个对我的作用有限。但是后来作者针对CF的worker项目单独做了个<br>
-CloudFlare Worker 版。这个版本对于没有海外服务器或者是对于海外网站浏览需求量较低水平的人来说是相当不错的了。每天10万次请求也足以应对个人使用或者是小范围分享了。</p>
-<h2 id="使用方法">使用方法</h2>
-<p>没有CF账号的先注册一个：https://dash.cloudflare.com/</p>
-<h3 id="创建worker">创建worker</h3>
-<p>直接点击Star Build https://workers.cloudflare.com/</p>
-<h3 id="复制js">复制js</h3>
-<p><img src="https://ae01.alicdn.com/kf/Hffa26636a6a8465a97e0817b25d44b30B.png" alt="image.png" loading="lazy"><br>
-填写自己喜爱的二级域名然后创建worker<br>
-点击创建服务 成功之后点进去有个快速编辑<br>
-进入github项目的<a href="https://github.com/yangmyc/jsproxy/blob/master/cf-worker/index.js">index.js</a>,复制代码。<br>
-清除示范代码后粘贴进去<br>
-<img src="https://ae02.alicdn.com/kf/H5b01a73b61034b259b134f072ec7f505X.png" alt="image.png" loading="lazy"><br>
-点击左下角保存并部署 还可以在预览页面看到你的worker</p>
-<p>收藏你的worker的域名或者记住就可以随时随地用了</p>
-<p>你可以使用该代理加速下载github仓库或者下载github上的文件</p>
+<p>因最近老师提出提出了<code>Socket</code>是否可以与<code>WebSocket</code>通讯的问题,让我去了解尝试一下,在网上搜索了一些有关于<code>Socket</code>和<code>WebSocket</code>的文章之后,便写下了这篇文章。在日常开发场景中,如果不是一个非常大型的系统,需要采用一些定制化的需求,我们只用粗略的了解这些协议的信息即可,没必要去深究这些协议.在本文中我列举了<code>WebSocket</code>和<code>Socket</code>以及<code>HTTP</code> 的简介以及他们的不同.随后我使用<a href="#C#%E5%AE%9E%E7%8E%B0">C#实现</a>了简单的Socket和WebSocket的列子。</p>
+<h2 id="socket">Socket</h2>
+<h3 id="简介">简介</h3>
+<p><code>Socket</code>是<a href="#OSI%E6%A8%A1%E5%9E%8B">OSI模型</a>中应用层与<a href="#TCP/IP%E5%8D%8F%E8%AE%AE">TCP/IP协议</a>族通信的中间软件抽象层，它是一组<code>接口</code>。在设计模式中，<code>Socket</code>其实就是一个门面模式，它把复杂的<a href="https://baike.baidu.com/item/TCP%2FIP%E5%8D%8F%E8%AE%AE/212915?fromtitle=tcp%2Fip&amp;fromid=214077&amp;fr=aladdin">TCP/IP协议</a>隐藏在<code>Socket</code>接口后面，对用户来说，一组简单的接口就是全部，让<code>Socket</code>去组织数据，以符合指定的协议。<code>Socket</code>又称套接字。</p>
+<p>一个生活中的场景。你要打电话给一个朋友，先拨号，朋友听到电话铃声后提起电话，这时你和你的朋友就建立起了连接，就可以讲话了。等交流结束，挂断电话结束此次交谈。</p>
+<p><strong>我所理解的Socket就是为了更方便使用TCP协议或者UDP协议的实现封装和应用。是抽象接口</strong></p>
+<h3 id="参考文献">参考文献</h3>
+<ol>
+<li><a href="https://blog.csdn.net/pashanhu6402/article/details/96428887">Socket原理</a></li>
+<li>百度百科：<a href="https://baike.baidu.com/item/%E5%A5%97%E6%8E%A5%E5%AD%97/9637606?fromtitle=socket&amp;fromid=281150&amp;fr=aladdin">Scoket(套接字)</a></li>
+</ol>
+<h2 id="websocket">WebSocket</h2>
+<h3 id="简介-2">简介</h3>
+<p><code>WebSocket</code>是HTML5一种新的协议。它实现了浏览器与服务器全双工通信(full-duplex)。一开始的握手需要借助HTTP请求完成(又称协议升级（HTTP-&gt;Websocket）。它的最大特点就是，服务器可以主动向客户端推送信息，客户端也可以主动向服务器发送信息，是真正的双向平等对话，属于<a href="https://en.wikipedia.org/wiki/Push_technology">服务器推送技术</a>的一种。目的：即时通讯，替代轮询</p>
+<p><strong>我所理解的WebSocket是双向通信协议，可以双向发送或接受信息。他的出现是为了替代HTTP协议长轮询的效率低下等问题进行了解决</strong></p>
+<h3 id="参考文献-2">参考文献</h3>
+<ol>
+<li>阮一峰：<a href="https://www.ruanyifeng.com/blog/2017/05/websocket.html">WebSocket 教程</a></li>
+<li><a href="https://www.cnblogs.com/cjeandailynotes/p/12594824.html">看完让你彻底搞懂Websocket原理</a></li>
+<li><a href="https://baijiahao.baidu.com/s?id=1713307876537918339&amp;wfr=spider&amp;for=pc">万字长文，一篇吃透WebSocket：概念、原理、易错常识、动手实践</a></li>
+</ol>
+<h2 id="http">HTTP</h2>
+<h3 id="简介-3">简介</h3>
+<p><code>HTTP</code>协议(超文本传输协议HyperText Transfer Protocol)，它是基于TCP协议的应用层传输协议，简单来说就是客户端和服务端进行数据传输的一种规则。<code>HTTP</code> 是一种<strong>无状态</strong> (stateless) 协议, <code>HTTP</code>协议本身不会对发送过的请求和相应的通信状态进行持久化处理。这样做的目的是为了保持HTTP协议的简单性，从而能够快速处理大量的事务, 提高效率。然而，在许多应用场景中，我们需要保持用户登录的状态或记录用户购物车中的商品。由于<code>HTTP</code>是无状态协议，所以必须引入一些技术来记录管理状态，例如<code>Cookie</code>。</p>
+<h3 id="参考文献-3">参考文献</h3>
+<p>1.知乎:<a href="https://zhuanlan.zhihu.com/p/45173862">深入理解HTTP协议</a></p>
+<h3 id="三种协议的区别">三种协议的区别</h3>
+<p>1.应用层协议</p>
+<ul>
+<li>DNS</li>
+<li>HTTP</li>
+<li>FTP</li>
+<li>SMTP</li>
+<li>WebSocket</li>
+<li>SNMP</li>
+</ul>
+<p>2.运输层协议</p>
+<ul>
+<li>TCP</li>
+<li>UDP</li>
+</ul>
+<p><code>Socket</code>其实并不是一个协议,是一个<code>抽象概念</code>，是为了方便使用<code>TCP协议</code>或<code>UDP协议</code>而抽象出来的一层，是位于应用层和传输控制层之间的一组接口。</p>
+<p><code>WebSocket</code>则是一个典型的应用层协议。<code>Socket</code>是传输控制层协议，<code>WebSocket</code>是应用层协议。我所理解的<code>WebSocket</code>就是对<code>Socket</code>接口的一种实现,但是他又跟<code>Socket</code>使用方面，完全两个东西.<code>WebSocket</code>一开始的握手需要借助HTTP请求完成,又称<code>协议升级</code>（HTTP-&gt;Websocket）</p>
+<p><code>Http</code>是一种<strong>无状态</strong> 协议, <code>HTTP</code>协议本身不会对发送过的请求和相应的通信状态进行持久化处理。</p>
+<h3 id="参考文献-4">参考文献</h3>
+<ol>
+<li><a href="https://www.cnblogs.com/aspirant/p/11334957.html">Http、Socket、WebSocket之间联系与区别 </a></li>
+</ol>
+<h3 id="c实现">C#实现</h3>
+<p><code>C#</code> 中提供了</p>
+<ul>
+<li>
+<p><code>Socket</code>类 ,是抽象概念是接口,可以基于它实现<code>TCP</code>传输 或 <code>UDP</code>传输</p>
+</li>
+<li>
+<p>基于<code>Socket</code>类 ,使用<code>TCP协议</code>封装的<code>TcpClient</code>类和<code>TCPListener</code> 类</p>
+</li>
+<li>
+<p>基于<code>Socket</code>类 ,使用<code>UDP协议</code>封装的<code>UdpClient</code>类</p>
+</li>
+</ul>
+<p>在使用<code>Socket</code>遇到了一个问题<code>粘包</code></p>
+<p>(<strong>严谨一点来说并不叫粘包,TCP协议是流式协议,所谓流式协议，即协议的内容是像流水一样的字节流，内容与内容之间没有明确的分界标志，需要我们人为地去给这些协议划分边界。客户端发送数据时，发送的buffer为实际发送内容的长度，当发送数据的长度小于服务端接收buffer的长度时，多个发送内容就会存放到服务端的buffer中，导致上次发送的数据和本次的发送的数据连在一起。</strong>)</p>
+<p>解决的方法也有很多(参考文献:<a href="https://www.zhihu.com/question/20210025?sort=created">怎么解决TCP网络传输「粘包」问题？ - 知乎 携程旅行网 资深研发工程师的回答 </a>)</p>
+<ol>
+<li>
+<p>固定包长的数据包</p>
+</li>
+<li>
+<p>以指定字符（串）为包的结束标志</p>
+</li>
+<li>
+<p>包头 + 包体格式</p>
+</li>
+</ol>
+<p>这里我是推荐大家使用第二种和第三种方式,第二种方式需要使用一些特定的字符进行划分每段数据的结束标志,遇到原消息种含有结束标志的时候,就需要对这些字符做转码或者转义操作，以免被接收方错误地当成包结束标志而误解析。第三章就是需要自己定义<strong>包头 + 包体格式</strong>,在日常开发中,还是要根据自己的实际需求去选择自己所使用的方法.</p>
+<h4 id="源码">源码</h4>
+<p>https://github.com/WindFgg/.NETSocket</p>
+<h2 id="总结">总结</h2>
+<p>最后总结出来C#的<code>Socket</code>类可以封装为<code>WebSocket</code> <code>WebSocket</code>自带心跳</p>
+<p><code>HTTP</code> <code>WebSocket</code> <code>Tcp</code> <code>UDP</code>都可以使用C#<code>Socket</code>类进行封装,C#有封装好的。</p>
+<p>又因为他们WebSocket和Socket在使用方面,完全不是一个东西。出发层面就错了。</p>
+<h2 id="拓展资料">拓展资料</h2>
+<h3 id="osi模型">OSI模型</h3>
+<h4 id="来源">来源</h4>
+<p>OSI（Open System Interconnect），即开放式系统互联。 一般都叫OSI参考模型，是ISO（国际标准化组织）组织在1985年研究的网络互连模型。 ISO为了更好的使网络应用更为普及，推出了OSI参考模型。其含义就是推荐所有公司使用这个规范来控制网络。这样所有公司都有相同的规范，就能互联了。</p>
+<h4 id="osi七层模型的划分">OSI七层模型的划分</h4>
+<p>OSI定义了网络互连的七层框架（物理层、数据链路层、网络层、传输层、会话层、表示层、应用层），即ISO开放互连系统参考模型。如下图。每一层实现各自的功能和协议，并完成与相邻层的接口通信。OSI的服务定义详细说明了各层所提供的服务。某一层的服务就是该层及其下各层的一种能力，它通过接口提供给更高一层。各层所提供的服务与这些服务是怎么实现的无关。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/11/30/okj4KXOTHQ18gbd.png" alt="" loading="lazy"></figure>
+<h4 id="参考文献-5">参考文献</h4>
+<ol>
+<li>
+<p>百度百科：<a href="https://baike.baidu.com/item/OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B">OSI参考模型</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/wdkirchhoff/article/details/43915825">HCNA-HNTD——以太网帧结构</a></p>
+</li>
+<li>
+<p>引用博客：<a href="https://www.cnblogs.com/qishui/p/5428938.html">OSI七层模型与TCP/IP五层模型</a></p>
+</li>
+</ol>
+<h3 id="tcpip协议">TCP/IP协议</h3>
+<h4 id="简介-4">简介</h4>
+<p><code>TCP/IP协议簇</code>， TCP/IP（Transmission Control Protocol/Internet Protocol）即传输控制协议/网间协议，定义了主机如何连入因特网及数据如何再它们之间传输的标准，</p>
+<p><strong>从字面意思来看TCP/IP是TCP和IP协议的合称，但实际上TCP/IP协议是指因特网整个TCP/IP协议簇</strong>。不同于ISO模型的七个分层，TCP/IP协议参考模型把所有的TCP/IP系列协议归类到四个抽象层中</p>
+<h4 id="tcpip四层模型以及五层模型">TCP/IP四层模型以及五层模型</h4>
+<h5 id="简介-5">简介</h5>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2021/12/01/4VqdWDlwvTkS1zL.png" alt="" loading="lazy"></figure>
+<p>TCP/IP四层模型是OSI七层模型的简化版，但是大致的核心内容是很类似的。虽然OSIG更容易开发和排除故障，但是相较于简洁的TCP/IP，显得庞大而笨拙。十分有趣的是，OSI虽然是官方提出的，但是由于一些原因，在它被完善之前，由民间开发的TCP/IP早已投入实际使用了，所以它几乎是只存在与教科书中，并没有大范围地投入使用。</p>
+<h5 id="tcpip四层参考模型">TCP/IP四层参考模型</h5>
+<p>TCP/IP四层参考模型从上到下可分为四层：<br>
+4、应用层（Application）：为用户提供所需要的各种服务<br>
+3、传输层（Transport）：为应用层实体提供端到端的通信功能，保证了数据包的顺序传送及数据的完整性<br>
+2、网际层（Internet）：主要解决主机到主机的通信问题<br>
+1、网络接口层（Network Access）：负责监视数据在主机和网络之间的交换</p>
+<h5 id="五层tcpip协议的体系结构">五层TCP/IP协议的体系结构</h5>
+<p>五层协议只是OSI和TCP/IP的综合。是专门为介绍网络原理而设计的，与TCP/IP四层模型唯一不同的就是将网络接口层分为了数据链路层和物理层，在实际的应用中还是使用TCP/IP四层模型的。</p>
+<h4 id="参考文献-6">参考文献</h4>
+<p>1.百度百科：<a href="https://baike.baidu.com/item/TCP%2FIP%E5%8D%8F%E8%AE%AE/212915?fromtitle=tcp%2Fip&amp;fromid=214077&amp;fr=aladdin">TCP/IP协议</a></p>
+<p>2.参考博客：<a href="https://www.cnblogs.com/wxd0108/p/7597216.html">OSI七层协议模型、TCP/IP四层模型和五层协议体系结构之间的关系 </a></p>
+<!-- more -->
 ]]></content>
     </entry>
 </feed>
