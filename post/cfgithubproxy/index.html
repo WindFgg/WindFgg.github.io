@@ -1,26 +1,13 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
-
-<title>使用Cloudflare Worker搭建一个免费、自己的 github代理 | Gridea</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://WindFgg.github.io/favicon.ico?v=1646310959980">
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cloudflare Worker 搭建 Github代理 | Gridea</title>
+<link rel="shortcut icon" href="https://WindFgg.github.io/favicon.ico?v=1646311018156">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://WindFgg.github.io/styles/main.css">
-
-
-  
-
-  
-    <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css" />
-  
-
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="alternate" type="application/atom+xml" title="Cloudflare Worker 搭建 Github代理 | Gridea - Atom Feed" href="https://WindFgg.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
@@ -29,82 +16,91 @@
 jsproxy简介
 jsproxy是 一个..." />
     <meta name="keywords" content="cloudflare,github_proxy" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://WindFgg.github.io">
-        <img src="https://WindFgg.github.io/images/avatar.png?v=1646310959980" class="site-logo">
-        <h1 class="site-title">Gridea</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
-    </div>
-    <div>
-      
-        
-          <a href="/" class="site-nav">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="site-nav">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="site-nav">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="site-nav">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      贵有恒 何必三更眠五更起</br>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://WindFgg.github.io">
+  <img class="avatar" src="https://WindFgg.github.io/images/avatar.png?v=1646311018156" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    贵有恒 何必三更眠五更起</br>
 最无益 只怕一日曝十日寒
-    </div>
-    <div class="site-footer">
-      <a href="https://github.com/WindFgg" target="_blank">Feng_Yun</a> | <a class="rss" href="https://WindFgg.github.io/atom.xml" target="_blank">RSS</a>
-    </div>
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
   </div>
 </div>
 
-
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">使用Cloudflare Worker搭建一个免费、自己的 github代理</h2>
-            <div class="post-date">2022-02-18</div>
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Cloudflare Worker 搭建 Github代理
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-02-18
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://WindFgg.github.io/tag/9EmWCH2MG/" class="post-tag">
+                  # cloudflare
+                </a>
+              
+                <a href="https://WindFgg.github.io/tag/cyUr3hWC9z/" class="post-tag">
+                  # github_proxy
+                </a>
+              
+            </div>
             
-            <div class="post-content" v-pre>
-              <h2 id="前言">前言</h2>
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h2 id="前言">前言</h2>
 <p>现在都流行无服务器函数，作为大牌CDN提供商<strong>cloud flare</strong>自然不甘落后推出了worker服务。免费用户有10万请求/每天 的额度，搭配上一些小型项目比如jsproxy就显得格外香甜。</p>
 <h3 id="jsproxy简介">jsproxy简介</h3>
 <p>jsproxy是 一个基于浏览器端 JS 实现的在线代理 。</p>
@@ -127,74 +123,107 @@ CloudFlare Worker 版。这个版本对于没有海外服务器或者是对于�
 <p>收藏你的worker的域名或者记住就可以随时随地用了</p>
 <p>你可以使用该代理加速下载github仓库或者下载github上的文件</p>
 
-            </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://WindFgg.github.io/tag/9EmWCH2MG/" class="tag">
-                    cloudflare
-                  </a>
-                
-                  <a href="https://WindFgg.github.io/tag/cyUr3hWC9z/" class="tag">
-                    github_proxy
-                  </a>
-                
               </div>
-            
-            
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a>
+<ul>
+<li><a href="#jsproxy%E7%AE%80%E4%BB%8B">jsproxy简介</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">使用方法</a>
+<ul>
+<li><a href="#%E5%88%9B%E5%BB%BAworker">创建worker</a></li>
+<li><a href="#%E5%A4%8D%E5%88%B6js">复制js</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
-            
-              
-
-              
-                <div id="disqus_thread" data-aos="fade-in"></div>
-              
-            
-
-          </div>
-
+              </div>
+            </div>
+          </article>
         </div>
-      </div>
-    </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="application/javascript">
+        
 
-AOS.init();
+        
+          
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+          
+            <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css">
+<script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script>
+
+var options = {
+  shortname: '',
+  apikey: '9eq0znZ8tK5TdyfXQ0M9xn2OqZO7oLb1KcbtLlysyYUxRnFxJJO7xNa34oxFm7QD',
+}
+if ('') {
+  options.api = ''
+}
+var dsqjs = new DisqusJS(options)
 
 </script>
 
+          
+        
 
+        <div class="site-footer">
+  <a href="https://github.com/WindFgg" target="_blank">Feng_Yun</a>
+  <a class="rss" href="https://WindFgg.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
 
+      </div>
+    </div>
 
-
-  
-
-  
-    <script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
     <script>
+      hljs.initHighlightingOnLoad()
 
-    var options = {
-      shortname: '',
-      apikey: '9eq0znZ8tK5TdyfXQ0M9xn2OqZO7oLb1KcbtLlysyYUxRnFxJJO7xNa34oxFm7QD',
-    }
-    if ('') {
-      options.api = ''
-    }
-    var dsqjs = new DisqusJS(options)
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
 
     </script>
-  
-
-
-
-
   </body>
 </html>
