@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://WindFgg.github.io</id>
     <title>Gridea</title>
-    <updated>2022-03-03T13:02:46.167Z</updated>
+    <updated>2022-03-24T11:30:31.518Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://WindFgg.github.io"/>
     <link rel="self" href="https://WindFgg.github.io/atom.xml"/>
@@ -11,6 +11,52 @@
     <logo>https://WindFgg.github.io/images/avatar.png</logo>
     <icon>https://WindFgg.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[Cloudflare Worker 搭建 TGBot代理]]></title>
+        <id>https://WindFgg.github.io/post/27NhR1_0-/</id>
+        <link href="https://WindFgg.github.io/post/27NhR1_0-/">
+        </link>
+        <updated>2022-03-24T11:26:43.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="使用方法">使用方法</h2>
+<p>把 bot888518123 改成自己的机器人就行,这个接口只有自己机器人的ID才会发送，不用担心呗滥用<br>
+然后使用Get请求下面网址</p>
+<p>https://xxxxx.xxx.workers.dev/bot888518123:AAERbtbJ5BnO3Ngyx5Xti1lTsGFgv1TRbh4/sendMessage?chat_id=703019123&amp;text=123</p>
+<p>703019123 是自己的TG id<br>
+123 是内容</p>
+<h2 id="代码">代码</h2>
+<pre><code class="language-js">const whitelist = [&quot;/bot888518123:&quot;];
+const tg_host = &quot;api.telegram.org&quot;;
+
+addEventListener('fetch', event =&gt; {
+    event.respondWith(handleRequest(event.request))
+})
+
+function validate(path) {
+    for (var i = 0; i &lt; whitelist.length; i++) {
+        if (path.startsWith(whitelist[i]))
+            return true; 
+    }
+    return false;
+}
+
+async function handleRequest(request) {
+    var u = new URL(request.url);
+    u.host = tg_host;
+    if (!validate(u.pathname))
+        return new Response('Unauthorized', {
+            status: 403
+        });
+    var req = new Request(u, {
+        method: request.method,
+        headers: request.headers,
+        body: request.body
+    });
+    const result = await fetch(req);
+    return result;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[键盘 KeyCode对照表]]></title>
         <id>https://WindFgg.github.io/post/key-code/</id>

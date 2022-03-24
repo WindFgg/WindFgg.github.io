@@ -2,20 +2,20 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cloudflare Worker 搭建 Github代理 | Gridea</title>
+<title>Cloudflare Worker 搭建 TGBot代理 | Gridea</title>
 <link rel="shortcut icon" href="https://WindFgg.github.io/favicon.ico?v=1648121427802">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://WindFgg.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Cloudflare Worker 搭建 Github代理 | Gridea - Atom Feed" href="https://WindFgg.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Cloudflare Worker 搭建 TGBot代理 | Gridea - Atom Feed" href="https://WindFgg.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="前言
-现在都流行无服务器函数，作为大牌CDN提供商cloud flare自然不甘落后推出了worker服务。免费用户有10万请求/每天 的额度，搭配上一些小型项目比如jsproxy就显得格外香甜。
-jsproxy简介
-jsproxy是 一个..." />
-    <meta name="keywords" content="教程,cloudflare,github_proxy" />
+    <meta name="description" content="使用方法
+把 bot888518123 改成自己的机器人就行,这个接口只有自己机器人的ID才会发送，不用担心呗滥用
+然后使用Get请求下面网址
+https://xxxxx.xxx.workers.dev/bot888518123:AAERb..." />
+    <meta name="keywords" content="proxy,cloudflare" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -78,71 +78,74 @@ jsproxy是 一个..." />
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Cloudflare Worker 搭建 Github代理
+              Cloudflare Worker 搭建 TGBot代理
             </h2>
             <div class="post-info">
               <span>
-                2022-01-20
+                2022-03-24
               </span>
               <span>
-                2 min read
+                1 min read
               </span>
               
-                <a href="https://WindFgg.github.io/tag/cRQchQ-No/" class="post-tag">
-                  # 教程
+                <a href="https://WindFgg.github.io/tag/oa9hs5Dpz/" class="post-tag">
+                  # proxy
                 </a>
               
                 <a href="https://WindFgg.github.io/tag/9EmWCH2MG/" class="post-tag">
                   # cloudflare
                 </a>
               
-                <a href="https://WindFgg.github.io/tag/cyUr3hWC9z/" class="post-tag">
-                  # github_proxy
-                </a>
-              
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h2 id="前言">前言</h2>
-<p>现在都流行无服务器函数，作为大牌CDN提供商<strong>cloud flare</strong>自然不甘落后推出了worker服务。免费用户有10万请求/每天 的额度，搭配上一些小型项目比如jsproxy就显得格外香甜。</p>
-<h3 id="jsproxy简介">jsproxy简介</h3>
-<p>jsproxy是 一个基于浏览器端 JS 实现的在线代理 。</p>
-<p>传统在线代理都是在服务端替换 HTML/JS/CSS 等资源中的 URL。这不仅需要对内容做大量的分析和处理，还需对流量进行解压和再压缩，消耗大量 CPU 资源。并且由于逻辑较复杂，通常使用 Python/PHP 等编程语言自己实现。</p>
-<p>为降低服务端开销，本项目使用浏览器的一个黑科技 —— Service Worker。它能让 JS 拦截网页产生的请求，并能自定义返回内容，相当于在浏览器内部实现一个反向代理。这使得绝大部分的内容处理都可以在浏览器上完成，服务器只需纯粹的转发流量。</p>
-<p>由于原项目还是需要海外服务器，所以之前也只是知道但是懒得搭建，毕竟这个对我的作用有限。但是后来作者针对CF的worker项目单独做了个<br>
-CloudFlare Worker 版。这个版本对于没有海外服务器或者是对于海外网站浏览需求量较低水平的人来说是相当不错的了。每天10万次请求也足以应对个人使用或者是小范围分享了。</p>
-<h2 id="使用方法">使用方法</h2>
-<p>没有CF账号的先注册一个：https://dash.cloudflare.com/</p>
-<h3 id="创建worker">创建worker</h3>
-<p>直接点击Star Build https://workers.cloudflare.com/</p>
-<h3 id="复制js">复制js</h3>
-<p><img src="https://ae01.alicdn.com/kf/Hffa26636a6a8465a97e0817b25d44b30B.png" alt="image.png" loading="lazy"><br>
-填写自己喜爱的二级域名然后创建worker<br>
-点击创建服务 成功之后点进去有个快速编辑<br>
-进入github项目的<a href="https://github.com/yangmyc/jsproxy/blob/master/cf-worker/index.js">index.js</a>,复制代码。<br>
-清除示范代码后粘贴进去<br>
-<img src="https://ae02.alicdn.com/kf/H5b01a73b61034b259b134f072ec7f505X.png" alt="image.png" loading="lazy"><br>
-点击左下角保存并部署 还可以在预览页面看到你的worker</p>
-<p>收藏你的worker的域名或者记住就可以随时随地用了</p>
-<p>你可以使用该代理加速下载github仓库或者下载github上的文件</p>
+                <h2 id="使用方法">使用方法</h2>
+<p>把 bot888518123 改成自己的机器人就行,这个接口只有自己机器人的ID才会发送，不用担心呗滥用<br>
+然后使用Get请求下面网址</p>
+<p>https://xxxxx.xxx.workers.dev/bot888518123:AAERbtbJ5BnO3Ngyx5Xti1lTsGFgv1TRbh4/sendMessage?chat_id=703019123&amp;text=123</p>
+<p>703019123 是自己的TG id<br>
+123 是内容</p>
+<h2 id="代码">代码</h2>
+<pre><code class="language-js">const whitelist = [&quot;/bot888518123:&quot;];
+const tg_host = &quot;api.telegram.org&quot;;
+
+addEventListener('fetch', event =&gt; {
+    event.respondWith(handleRequest(event.request))
+})
+
+function validate(path) {
+    for (var i = 0; i &lt; whitelist.length; i++) {
+        if (path.startsWith(whitelist[i]))
+            return true; 
+    }
+    return false;
+}
+
+async function handleRequest(request) {
+    var u = new URL(request.url);
+    u.host = tg_host;
+    if (!validate(u.pathname))
+        return new Response('Unauthorized', {
+            status: 403
+        });
+    var req = new Request(u, {
+        method: request.method,
+        headers: request.headers,
+        body: request.body
+    });
+    const result = await fetch(req);
+    return result;
+}
+</code></pre>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E5%89%8D%E8%A8%80">前言</a>
-<ul>
-<li><a href="#jsproxy%E7%AE%80%E4%BB%8B">jsproxy简介</a></li>
-</ul>
-</li>
-<li><a href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">使用方法</a>
-<ul>
-<li><a href="#%E5%88%9B%E5%BB%BAworker">创建worker</a></li>
-<li><a href="#%E5%A4%8D%E5%88%B6js">复制js</a></li>
-</ul>
-</li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">使用方法</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81">代码</a></li>
 </ul>
 </li>
 </ul>
@@ -155,9 +158,9 @@ CloudFlare Worker 版。这个版本对于没有海外服务器或者是对于�
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://WindFgg.github.io/post/frp/">
+            <a href="https://WindFgg.github.io/post/key-code/">
               <h3 class="post-title">
-                Frp的使用指南
+                键盘 KeyCode对照表
               </h3>
             </a>
           </div>
