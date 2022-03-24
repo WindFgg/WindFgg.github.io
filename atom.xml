@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://WindFgg.github.io</id>
     <title>Gridea</title>
-    <updated>2022-03-24T11:30:31.518Z</updated>
+    <updated>2022-03-24T11:31:02.988Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://WindFgg.github.io"/>
     <link rel="self" href="https://WindFgg.github.io/atom.xml"/>
@@ -18,7 +18,7 @@
         </link>
         <updated>2022-03-24T11:26:43.000Z</updated>
         <content type="html"><![CDATA[<h2 id="使用方法">使用方法</h2>
-<p>把 bot888518123 改成自己的机器人就行,这个接口只有自己机器人的ID才会发送，不用担心呗滥用<br>
+<p>把 bot888518123 改成自己的机器人就行 这个接口只有自己机器人的ID才会发送 不用担心被滥用<br>
 然后使用Get请求下面网址</p>
 <p>https://xxxxx.xxx.workers.dev/bot888518123:AAERbtbJ5BnO3Ngyx5Xti1lTsGFgv1TRbh4/sendMessage?chat_id=703019123&amp;text=123</p>
 <p>703019123 是自己的TG id<br>
